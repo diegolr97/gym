@@ -2355,7 +2355,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         String patch="C:/Users/diego/OneDrive/Documentos/NetBeansProjects/StarGYM/src/Reportes/report1.jasper";
         JasperReport jr = null;
         try{
-             jr = (JasperReport) JRXmlLoader.load(patch);
+             //jr = (JasperReport) JRXmlLoader.load(patch);
             
             JasperPrint jp = JasperFillManager.fillReport(jr, null, cn.getConexion());
             JasperViewer jv = new JasperViewer(jp);
