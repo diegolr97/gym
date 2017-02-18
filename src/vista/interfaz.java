@@ -24,6 +24,16 @@ import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import modelo.conexion;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
+
+import org.edisoncor.gui.panel.NewJFrame;
 import org.edisoncor.gui.util.Avatar;
 
 /**
@@ -891,6 +901,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
 
         buttonAction9.setText("Mensualidad");
+        buttonAction9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction9ActionPerformed(evt);
+            }
+        });
 
         buttonAction10.setText("Matricula");
         buttonAction10.addActionListener(new java.awt.event.ActionListener() {
@@ -2334,6 +2349,25 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         f.eliminarMaquina(Integer.parseInt(idMaquina));
         this.tablaMaquinas.setModel(f.listarMaquinas());
     }//GEN-LAST:event_buttonAction32ActionPerformed
+
+    private void buttonAction9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction9ActionPerformed
+        conexion cn = new conexion();
+        String patch="C:/Users/diego/OneDrive/Documentos/NetBeansProjects/StarGYM/src/Reportes/report1.jasper";
+        JasperReport jr = null;
+        try{
+             jr = (JasperReport) JRXmlLoader.load(patch);
+            
+            JasperPrint jp = JasperFillManager.fillReport(jr, null, cn.getConexion());
+            JasperViewer jv = new JasperViewer(jp);
+            jv.setVisible(true);
+            jv.setTitle(patch);
+            
+            
+        }catch(JRException ex){
+            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE,null, ex);
+            
+        }
+    }//GEN-LAST:event_buttonAction9ActionPerformed
 
     /**
      * @param args the command line arguments

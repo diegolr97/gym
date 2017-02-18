@@ -1506,6 +1506,9 @@
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Mensualidad"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction9ActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction10">
                               <Properties>
