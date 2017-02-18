@@ -83,7 +83,7 @@ public class modeloClase extends conexion implements interfazClase {
         return res;
         }
     @Override
-    public DefaultComboBoxModel comboClases(){
+    public DefaultComboBoxModel comboMonitores(){
         DefaultComboBoxModel m = new DefaultComboBoxModel();
         try{
           PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM monitores");

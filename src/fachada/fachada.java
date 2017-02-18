@@ -88,8 +88,8 @@ public class fachada {
     public boolean añadirClase(String nombre, double precio, String idMonitor){
         return clase.añadirClase(nombre, precio, idMonitor);
     }
-    public DefaultComboBoxModel comboClases(){
-        return clase.comboClases();
+    public DefaultComboBoxModel comboMonitores(){
+        return clase.comboMonitores();
     }
      public boolean eliminarClase(int idClase){
          return clase.eliminarClase(idClase);
@@ -106,6 +106,15 @@ public class fachada {
      
      public DefaultTableModel listarMaquinas(){
          return maquina.listarMaquinas();
+     }
+     public boolean añadirMaquina(int idClase, String descripcion){
+         return maquina.añadirMaquina(idClase, descripcion);
+     }
+     public DefaultComboBoxModel comboClases(){
+         return maquina.comboClases();
+     }
+     public boolean eliminarMaquina(int idMaquina){
+         return maquina.eliminarMaquina(idMaquina);
      }
      
      //-------monitores------------//

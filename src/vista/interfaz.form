@@ -2463,6 +2463,9 @@
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Eliminar"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction32ActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction33">
                               <Properties>
@@ -2473,6 +2476,9 @@
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Guardar"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction34ActionPerformed"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -2785,6 +2791,9 @@
                           </Properties>
                         </Component>
                         <Component class="org.edisoncor.gui.comboBox.ComboBoxRound" name="comboBoxRound2">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxRound2ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>

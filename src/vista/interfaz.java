@@ -1500,10 +1500,20 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         buttonAction31.setText("Modificar");
 
         buttonAction32.setText("Eliminar");
+        buttonAction32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction32ActionPerformed(evt);
+            }
+        });
 
         buttonAction33.setText("Nuevo");
 
         buttonAction34.setText("Guardar");
+        buttonAction34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction34ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1695,6 +1705,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         labelMetric50.setText("Monitor:");
         labelMetric50.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+
+        comboBoxRound2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxRound2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -1966,7 +1982,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             panelAdminTrabajador.setVisible(false);
             this.tablaClases.setModel(f.listarClases());
             this.tablaMaquinas.setModel(f.listarMaquinas());
-            this.comboBoxRound2.setModel(f.comboClases());
+            this.comboBoxRound2.setModel(f.comboMonitores());
+            this.comboBoxRound1.setModel(f.comboClases());
         }
         
         if(avatarAdmin.getSelectedtitulo().equals("Clases")){
@@ -2302,6 +2319,21 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         
         
     }//GEN-LAST:event_tablaClasesMouseClicked
+
+    private void buttonAction34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction34ActionPerformed
+    f.añadirMaquina(this.comboBoxRound1.getSelectedIndex()+1, this.txtAdminAdministradorNombre11.getText());
+    this.tablaMaquinas.setModel(f.listarMaquinas());
+    }//GEN-LAST:event_buttonAction34ActionPerformed
+
+    private void comboBoxRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxRound2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxRound2ActionPerformed
+
+    private void buttonAction32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction32ActionPerformed
+       String idMaquina= (String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
+        f.eliminarMaquina(Integer.parseInt(idMaquina));
+        this.tablaMaquinas.setModel(f.listarMaquinas());
+    }//GEN-LAST:event_buttonAction32ActionPerformed
 
     /**
      * @param args the command line arguments

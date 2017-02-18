@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -13,4 +14,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public interface interfazMaquina {
     public DefaultTableModel listarMaquinas();
+    public boolean añadirMaquina(int idClase, String descripcion);
+    public DefaultComboBoxModel comboClases();
+    public boolean eliminarMaquina(int idMaquina);
 }

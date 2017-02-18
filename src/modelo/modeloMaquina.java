@@ -6,8 +6,10 @@
 package modelo;
 
 import java.sql.CallableStatement;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -57,6 +59,63 @@ public class modeloMaquina extends conexion implements interfazMaquina {
         }
         return tablemodel;
         
+    }
+    
+    public boolean añadirMaquina(int idClase, String descripcion){
+     boolean res=false;
+        
+        try {
+            CallableStatement cstm = this.getConexion().prepareCall("{call añadirMaquina(?,?)}");
+            
+            cstm.setInt(1, idClase);
+            cstm.setString(2, descripcion);
+            cstm.executeUpdate();
+            
+            cstm.close();
+            res=true;
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage() + "     \n  " + ex.getSQLState());
+        }
+        return res;
+        }
+    @Override
+    public DefaultComboBoxModel comboClases(){
+        DefaultComboBoxModel m = new DefaultComboBoxModel();
+        try{
+          PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM clase");
+          ResultSet res = pstm.executeQuery();
+          
+          while(res.next()){
+              m.addElement(res.getString("nombre"));
+              
+          }
+        }catch(SQLException e){
+            e.printStackTrace();
+            
+        }
+        return m;
+    }
+    @Override
+    public boolean eliminarMaquina(int idMaquina){
+        boolean res=false;
+        try {
+            //Preparamos la funcion que va a ejecutar la eliminacion
+            CallableStatement cstm = this.getConexion().prepareCall("{call eliminarMaquina(?)}");
+            //Indicas el tipo de dato que devuelve
+            //Indicas el parametro que le pasas, en este caso el codigo del bar y el dni
+            cstm.setInt(1, idMaquina);
+            //Ejecutas la funcion
+            cstm.executeUpdate();
+             //Recoges el resultado
+            cstm.close();
+            res=true;
+            
+            
+        } catch (Exception e) {
+        }
+        return res;
     }
     
 }
