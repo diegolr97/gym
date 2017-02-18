@@ -107,7 +107,8 @@ public class modeloCliente extends conexion implements interfazCliente {
         return tablemodel;
         
     }
-      public boolean añadirCliente(String dni, String nombre, String apellidos, Date fechaNacimiento, String direccion, int codPostal, String ciudad, int telefono, String correo){
+      @Override
+      public boolean añadirCliente(String dni, String nombre, String apellidos, String fechaNacimiento, String direccion, int codPostal, String ciudad, int telefono, String correo){
      boolean res=false;
         
         try {
@@ -116,7 +117,7 @@ public class modeloCliente extends conexion implements interfazCliente {
             cstm.setString(1, dni);
             cstm.setString(2, nombre);
             cstm.setString(3, apellidos);
-            cstm.setDate(4, fechaNacimiento);
+            cstm.setString(4, fechaNacimiento);
             cstm.setString(5, direccion);
             cstm.setInt(6, codPostal);
             cstm.setString(7, ciudad);

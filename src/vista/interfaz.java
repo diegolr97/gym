@@ -1903,7 +1903,14 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         panelAdminMaquina.setVisible(false);
         panelAdminTrabajador.setVisible(false);
         }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
-            panelAdminCliente.setVisible(false);
+        panelLoguin.setVisible(false);
+        avatarAdmin.setVisible(false);
+        panelAdmin.setVisible(true);
+        panelAdminAdmin.setVisible(false);
+        panelAdminClase.setVisible(false);
+        panelAdminCliente.setVisible(true);
+        panelAdminMaquina.setVisible(false);
+        panelAdminTrabajador.setVisible(false);
         }else{
             JOptionPane.showMessageDialog(null, "Datos incorrectos");
         }
@@ -2132,12 +2139,19 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
     private void tablaClientesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClientesKeyReleased
         String dni=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 0);
-        String nombre= (String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 1);
-        
-        int num =1;
+        String nombre=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 1);
+        String apellidos=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 2);
+        String fechaNacimiento=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(),7);
+        String direccion=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 3);
+        String codPostal=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 5);
+        String ciudad=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 4);
+        String telefono=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 6);
+        String correo=(String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 8);
+    
         System.out.println("tecla presionada");
         
-        f.modificarClienteTable(dni, nombre, nombre, nombre, nombre, 1, nombre, 1, nombre);
+        
+        f.modificarClienteTable(dni, nombre, apellidos, fechaNacimiento, direccion, Integer.parseInt(codPostal), ciudad, Integer.parseInt(telefono), correo);
         
         this.tablaClientes.setModel(f.listarClientes());
         
@@ -2191,8 +2205,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_atrasActionPerformed
 
     private void buttonAction8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction8ActionPerformed
-
-        if(f.añadirCliente(this.txtAdminAdministradorNombre3.getText(), this.txtAdminAdministradorApellidos3.getText(), this.txtAdminAdministradorNombre2.getText(), (Date) this.fecha.getDate(), this.txtAdminAdministradorDireccion1.getText(), Integer.parseInt(txtAdminAdministradorCodPostal1.getText()),this.txtAdminAdministradorApellidos2.getText(), Integer.parseInt(this.txtAdminAdministradorTelefono1.getText()), this.txtAdminAdministradorCorreo1.getText())){
+   String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha.getDate());
+        if(f.añadirCliente(this.txtAdminAdministradorNombre3.getText(), this.txtAdminAdministradorApellidos3.getText(), this.txtAdminAdministradorNombre2.getText(), fecha, this.txtAdminAdministradorDireccion1.getText(), Integer.parseInt(txtAdminAdministradorCodPostal1.getText()),this.txtAdminAdministradorApellidos2.getText(), Integer.parseInt(this.txtAdminAdministradorTelefono1.getText()), this.txtAdminAdministradorCorreo1.getText())){
             this.tablaClientes.setModel(f.listarClientes());
             System.out.println("Cliente añadido");
         }else{

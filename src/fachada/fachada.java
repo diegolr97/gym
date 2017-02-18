@@ -52,9 +52,9 @@ public class fachada {
          return cliente.listarClientes();
      }
      
-    public boolean añadirCliente(String dni, String nombre, String apellidos, Date fechaNacimiento, String direccion, int codPostal, String ciudad, int telefono, String correo){
+    public boolean añadirCliente(String dni, String nombre, String apellidos, String fechaNacimiento, String direccion, int codPostal, String ciudad, int telefono, String correo){
         return cliente.añadirCliente(dni, nombre, apellidos, fechaNacimiento, direccion, codPostal, ciudad, telefono, correo);
-     }
+    }
     public boolean eliminarCliente(String dni){
          return cliente.eliminarCliente(dni);
      }
