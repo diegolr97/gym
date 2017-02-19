@@ -91,12 +91,17 @@ public class fachada {
     public DefaultComboBoxModel comboMonitores(){
         return clase.comboMonitores();
     }
-     public boolean eliminarClase(int idClase){
-         return clase.eliminarClase(idClase);
-     }
-      public boolean modificarClase(int idClase, String nombre, double precio, String idMonitor){
-          return clase.modificarClase(idClase, nombre, precio, idMonitor);
-      }
+    
+    public DefaultComboBoxModel comboTablaClases(){
+        return clase.comboTablaClases();
+    }
+    
+    public boolean eliminarClase(int idClase){
+        return clase.eliminarClase(idClase);
+    }
+    public boolean modificarClase(int idClase, String nombre, double precio, String idMonitor){
+        return clase.modificarClase(idClase, nombre, precio, idMonitor);
+    }
     
     
      

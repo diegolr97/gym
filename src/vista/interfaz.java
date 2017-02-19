@@ -15,23 +15,22 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.DefaultCellEditor;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableColumn;
 import modelo.conexion;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.util.JRLoader;
-import net.sf.jasperreports.engine.xml.JRXmlLoader;
-import net.sf.jasperreports.view.JasperViewer;
+
 
 import org.edisoncor.gui.panel.NewJFrame;
 import org.edisoncor.gui.util.Avatar;
@@ -44,6 +43,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     
     fachada f = new fachada();
     
+    //ComboBox tabla Clases
+    JComboBox jcb  = new JComboBox(f.comboMonitores());
     
     
     
@@ -128,12 +129,10 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         txttelefonomonitor = new org.edisoncor.gui.textField.TextField();
         txtcorreomonitor = new org.edisoncor.gui.textField.TextField();
         labelMetric39 = new org.edisoncor.gui.label.LabelMetric();
-        buttonAction21 = new org.edisoncor.gui.button.ButtonAction();
+        Guardar = new org.edisoncor.gui.button.ButtonAction();
         buttonAction22 = new org.edisoncor.gui.button.ButtonAction();
-        buttonAction24 = new org.edisoncor.gui.button.ButtonAction();
         labelMetric40 = new org.edisoncor.gui.label.LabelMetric();
         txtnombremonitor = new org.edisoncor.gui.textField.TextField();
-        jButton1 = new javax.swing.JButton();
         panelPrincipal = new javax.swing.JPanel();
         panelLoguin = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -253,8 +252,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jScrollPane7 = new javax.swing.JScrollPane();
         tablaMaquinas = new javax.swing.JTable();
         labelMetric38 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorNombre11 = new org.edisoncor.gui.textField.TextField();
-        comboBoxRound1 = new org.edisoncor.gui.comboBox.ComboBoxRound();
+        txtAdminManquinaNombre = new org.edisoncor.gui.textField.TextField();
+        cmbAdminMaquinas = new org.edisoncor.gui.comboBox.ComboBoxRound();
         labelMetric46 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric47 = new org.edisoncor.gui.label.LabelMetric();
         jPanel12 = new javax.swing.JPanel();
@@ -272,7 +271,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric49 = new org.edisoncor.gui.label.LabelMetric();
         txtAdminAdministradorNombre13 = new org.edisoncor.gui.textField.TextField();
         labelMetric50 = new org.edisoncor.gui.label.LabelMetric();
-        comboBoxRound2 = new org.edisoncor.gui.comboBox.ComboBoxRound();
+        cmbAdminClases = new org.edisoncor.gui.comboBox.ComboBoxRound();
         labelTask4 = new org.edisoncor.gui.label.LabelTask();
         panelAdminClase = new javax.swing.JPanel();
         btnAdminRetroceso = new org.edisoncor.gui.button.ButtonCircle();
@@ -410,7 +409,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric39.setText("MONITORES");
         labelMetric39.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        buttonAction21.setText("Aceptar");
+        Guardar.setText("Guardar");
+        Guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarActionPerformed(evt);
+            }
+        });
 
         buttonAction22.setText("Eliminar");
         buttonAction22.addActionListener(new java.awt.event.ActionListener() {
@@ -419,65 +423,55 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             }
         });
 
-        buttonAction24.setText("Eliminar");
-
         labelMetric40.setText("Nombre:");
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelMetric39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMetric39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jButton1)
-                                .addGap(18, 18, 18)
-                                .addComponent(buttonAction22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(buttonAction21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
+                                            .addComponent(labelMetric36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(txttelefonomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(labelMetric37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtcorreomonitor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
+                                            .addComponent(labelMetric35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtapellidosmonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel15Layout.createSequentialGroup()
+                                        .addGap(33, 33, 33)
+                                        .addComponent(labelMetric34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(14, 14, 14)
+                                        .addComponent(txtdnimonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(labelMetric40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(14, 14, 14)
+                                        .addComponent(txtnombremonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addGap(141, 141, 141)
+                                .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonAction24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(buttonAction22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
-                            .addComponent(labelMetric36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txttelefonomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(labelMetric37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtcorreomonitor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
-                            .addComponent(labelMetric35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtapellidosmonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(labelMetric34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
-                        .addComponent(txtdnimonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(labelMetric40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
-                        .addComponent(txtnombremonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -503,13 +497,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                         .addComponent(txtcorreomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txttelefonomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(labelMetric36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonAction22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAction21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAction24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap())
+                    .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout diaAdminMaquinaMonitorLayout = new javax.swing.GroupLayout(diaAdminMaquinaMonitor.getContentPane());
@@ -1522,6 +1514,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
 
         buttonAction33.setText("Nuevo");
+        buttonAction33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction33ActionPerformed(evt);
+            }
+        });
 
         buttonAction34.setText("Guardar");
         buttonAction34.addActionListener(new java.awt.event.ActionListener() {
@@ -1568,13 +1565,23 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tablaMaquinas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMaquinasMouseClicked(evt);
+            }
+        });
+        tablaMaquinas.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tablaMaquinasKeyPressed(evt);
+            }
+        });
         jScrollPane7.setViewportView(tablaMaquinas);
 
         labelMetric38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelMetric38.setText("MAQUINAS");
         labelMetric38.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
 
-        txtAdminAdministradorNombre11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminManquinaNombre.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         labelMetric46.setText("Nombre:");
         labelMetric46.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -1597,11 +1604,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                         .addComponent(labelMetric46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAdminAdministradorNombre11, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAdminManquinaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(labelMetric47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboBoxRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(cmbAdminMaquinas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
@@ -1613,9 +1620,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAdministradorNombre11, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminManquinaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboBoxRound1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbAdminMaquinas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1721,9 +1728,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric50.setText("Monitor:");
         labelMetric50.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        comboBoxRound2.addActionListener(new java.awt.event.ActionListener() {
+        cmbAdminClases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBoxRound2ActionPerformed(evt);
+                cmbAdminClasesActionPerformed(evt);
             }
         });
 
@@ -1748,7 +1755,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtAdminAdministradorNombre12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(comboBoxRound2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                                    .addComponent(cmbAdminClases, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel12Layout.createSequentialGroup()
@@ -1781,7 +1788,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(comboBoxRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbAdminClases, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(buttonIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1923,8 +1930,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoguinEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoguinEntrarActionPerformed
-        if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==1){
-         JOptionPane.showMessageDialog(null, "Datos correctos");
+//        if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==1){
+//         JOptionPane.showMessageDialog(null, "Datos correctos");
         panelLoguin.setVisible(false);
         avatarAdmin.setVisible(true);
         panelAdmin.setVisible(true);
@@ -1933,18 +1940,18 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         panelAdminCliente.setVisible(false);
         panelAdminMaquina.setVisible(false);
         panelAdminTrabajador.setVisible(false);
-        }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
-        panelLoguin.setVisible(false);
-        avatarAdmin.setVisible(false);
-        panelAdmin.setVisible(true);
-        panelAdminAdmin.setVisible(false);
-        panelAdminClase.setVisible(false);
-        panelAdminCliente.setVisible(true);
-        panelAdminMaquina.setVisible(false);
-        panelAdminTrabajador.setVisible(false);
-        }else{
-            JOptionPane.showMessageDialog(null, "Datos incorrectos");
-        }
+//        }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
+//        panelLoguin.setVisible(false);
+//        avatarAdmin.setVisible(false);
+//        panelAdmin.setVisible(true);
+//        panelAdminAdmin.setVisible(false);
+//        panelAdminClase.setVisible(false);
+//        panelAdminCliente.setVisible(true);
+//        panelAdminMaquina.setVisible(false);
+//        panelAdminTrabajador.setVisible(false);
+//        }else{
+//            JOptionPane.showMessageDialog(null, "Datos incorrectos");
+//        }
     }//GEN-LAST:event_btnLoguinEntrarActionPerformed
 
     private void btnAdminIpodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminIpodActionPerformed
@@ -1995,10 +2002,17 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(true);
             panelAdminTrabajador.setVisible(false);
+            
+            //------------------------------------------------------------------------
             this.tablaClases.setModel(f.listarClases());
+            
+            TableColumn tc = tablaClases.getColumnModel().getColumn(3);
+            TableCellEditor tce = new DefaultCellEditor(jcb);
+            tc.setCellEditor(tce);
+            //------------------------------------------------------------------------
             this.tablaMaquinas.setModel(f.listarMaquinas());
-            this.comboBoxRound2.setModel(f.comboMonitores());
-            this.comboBoxRound1.setModel(f.comboClases());
+            this.cmbAdminClases.setModel(f.comboMonitores());
+            this.cmbAdminMaquinas.setModel(f.comboClases());
         }
         
         if(avatarAdmin.getSelectedtitulo().equals("Clases")){
@@ -2123,6 +2137,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_txtAdminAdministradorNombre3ActionPerformed
 
     private void tablaClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClientesMouseClicked
+        //admin tabla clientes
         this.txtAdminAdministradorNombre3.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 0));
         this.txtAdminAdministradorApellidos3.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 1));
         this.txtAdminAdministradorNombre2.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 2));
@@ -2273,17 +2288,13 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     private void buttonIcon1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonIcon1ActionPerformed
         //Admin maquinas boton para añadir monitor al registro
         diaAdminMaquinaMonitor.setLocationRelativeTo(panelPrincipal);
-        diaAdminMaquinaMonitor.setSize(537, 395);
+        diaAdminMaquinaMonitor.setSize(537, 430);
         diaAdminMaquinaMonitor.setVisible(true);
         this.tbMonitores.setModel(f.listarMonitores());
     }//GEN-LAST:event_buttonIcon1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        f.añadirMonitor(this.txtdnimonitor.getText(), this.txtnombremonitor.getText(), this.txtapellidosmonitor.getText(), Integer.parseInt(this.txttelefonomonitor.getText()), this.txtcorreomonitor.getText());
-        this.tbMonitores.setModel(f.listarMonitores());
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void buttonAction22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction22ActionPerformed
+        //Boton dialog monitores eliminar
         f.eliminarMonitor((String) tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 0) );
         this.tbMonitores.setModel(f.listarMonitores());
     }//GEN-LAST:event_buttonAction22ActionPerformed
@@ -2308,8 +2319,19 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_tbMonitoresKeyReleased
 
     private void buttonAction18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction18ActionPerformed
-        f.añadirClase(this.txtAdminAdministradorNombre12.getText(), Double.parseDouble(this.txtAdminAdministradorNombre13.getText()), (String)this.comboBoxRound2.getSelectedItem());
+        //Admin guardar clase
+        String dniMonitor = (String)this.cmbAdminClases.getSelectedItem();
+        
+        String dniM = dniMonitor.substring(0, 9);
+        System.out.println("El dni del monitor es: " + dniM);
+        f.añadirClase(this.txtAdminAdministradorNombre12.getText(), Double.parseDouble(this.txtAdminAdministradorNombre13.getText()), dniM);
+        
         this.tablaClases.setModel(f.listarClases());
+        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
+        TableCellEditor tce = new DefaultCellEditor(jcb);
+        tc.setCellEditor(tce);
+        
+        this.cmbAdminMaquinas.setModel(f.comboClases());
     }//GEN-LAST:event_buttonAction18ActionPerformed
 
     private void buttonAction16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction16ActionPerformed
@@ -2320,12 +2342,27 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_buttonAction16ActionPerformed
 
     private void tablaClasesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClasesKeyReleased
+        //key released tabla clases
         String idClase=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 0);
         String nombre=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 1);
         String precio=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 2);
-        String idMonitor=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 3);
+        //String idMonitor=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 3);
         
-        f.modificarClase(Integer.parseInt(idClase), nombre, Double.parseDouble(precio), idMonitor);
+        
+        String idMonitor = jcb.getSelectedItem().toString();
+        String idM = idMonitor.substring(0, 9);
+        
+        //List<String> l = Arrays.asList(idMonitor.split(" "));
+        
+        //String idM = l.get(0);
+        
+        System.out.println("El idDe monitor de la tabla es: " + idM);
+        f.modificarClase(Integer.parseInt(idClase), nombre, Double.parseDouble(precio), idM);
+        
+        tablaClases.setModel(f.listarClases());
+        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
+        TableCellEditor tce = new DefaultCellEditor(jcb);
+        tc.setCellEditor(tce);
     }//GEN-LAST:event_tablaClasesKeyReleased
 
     private void tablaClasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClasesMouseClicked
@@ -2336,13 +2373,20 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_tablaClasesMouseClicked
 
     private void buttonAction34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction34ActionPerformed
-    f.añadirMaquina(this.comboBoxRound1.getSelectedIndex()+1, this.txtAdminAdministradorNombre11.getText());
-    this.tablaMaquinas.setModel(f.listarMaquinas());
+    //Boton admin maquinas guardar
+        String idClaseProv = cmbAdminMaquinas.getSelectedItem().toString();
+        List<String> l = Arrays.asList(idClaseProv.split(" "));
+        
+        int idClase = Integer.parseInt(l.get(0));
+        System.out.println("la Id es: " + idClase);
+        
+        f.añadirMaquina(idClase, this.txtAdminManquinaNombre.getText());
+        this.tablaMaquinas.setModel(f.listarMaquinas());
     }//GEN-LAST:event_buttonAction34ActionPerformed
 
-    private void comboBoxRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxRound2ActionPerformed
+    private void cmbAdminClasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbAdminClasesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comboBoxRound2ActionPerformed
+    }//GEN-LAST:event_cmbAdminClasesActionPerformed
 
     private void buttonAction32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction32ActionPerformed
        String idMaquina= (String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
@@ -2351,23 +2395,28 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_buttonAction32ActionPerformed
 
     private void buttonAction9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction9ActionPerformed
-        conexion cn = new conexion();
-        String patch="C:/Users/diego/OneDrive/Documentos/NetBeansProjects/StarGYM/src/Reportes/report1.jasper";
-        JasperReport jr = null;
-        try{
-             //jr = (JasperReport) JRXmlLoader.load(patch);
-            
-            JasperPrint jp = JasperFillManager.fillReport(jr, null, cn.getConexion());
-            JasperViewer jv = new JasperViewer(jp);
-            jv.setVisible(true);
-            jv.setTitle(patch);
-            
-            
-        }catch(JRException ex){
-            Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE,null, ex);
-            
-        }
+        
     }//GEN-LAST:event_buttonAction9ActionPerformed
+
+    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
+        //Boton dialog monitores guardar
+        f.añadirMonitor(this.txtdnimonitor.getText(), this.txtnombremonitor.getText(), this.txtapellidosmonitor.getText(), Integer.parseInt(this.txttelefonomonitor.getText()), this.txtcorreomonitor.getText());
+        this.tbMonitores.setModel(f.listarMonitores());
+    }//GEN-LAST:event_GuardarActionPerformed
+
+    private void tablaMaquinasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaMaquinasKeyPressed
+        //admin
+    }//GEN-LAST:event_tablaMaquinasKeyPressed
+
+    private void tablaMaquinasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMaquinasMouseClicked
+        //admin tabla maquinas
+        //txtAdminManquinaNombre.setText((String) this.tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 1));
+    }//GEN-LAST:event_tablaMaquinasMouseClicked
+
+    private void buttonAction33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction33ActionPerformed
+        //boton admin maquina nuevo
+        txtAdminManquinaNombre.setText("");
+    }//GEN-LAST:event_buttonAction33ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2406,6 +2455,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.edisoncor.gui.button.ButtonAction Guardar;
     private org.edisoncor.gui.button.ButtonAction atras;
     private org.edisoncor.gui.panel.PanelAvatarChooser avatarAdmin;
     private org.edisoncor.gui.button.ButtonIpod btnAdminIpod;
@@ -2424,9 +2474,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     private org.edisoncor.gui.button.ButtonAction buttonAction19;
     private org.edisoncor.gui.button.ButtonAction buttonAction2;
     private org.edisoncor.gui.button.ButtonAction buttonAction20;
-    private org.edisoncor.gui.button.ButtonAction buttonAction21;
     private org.edisoncor.gui.button.ButtonAction buttonAction22;
-    private org.edisoncor.gui.button.ButtonAction buttonAction24;
     private org.edisoncor.gui.button.ButtonAction buttonAction3;
     private org.edisoncor.gui.button.ButtonAction buttonAction31;
     private org.edisoncor.gui.button.ButtonAction buttonAction32;
@@ -2441,12 +2489,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     private org.edisoncor.gui.button.ButtonAeroLeft buttonAeroLeft1;
     private org.edisoncor.gui.button.ButtonAeroRight buttonAeroRight1;
     private org.edisoncor.gui.button.ButtonIcon buttonIcon1;
-    private org.edisoncor.gui.comboBox.ComboBoxRound comboBoxRound1;
-    private org.edisoncor.gui.comboBox.ComboBoxRound comboBoxRound2;
+    private org.edisoncor.gui.comboBox.ComboBoxRound cmbAdminClases;
+    private org.edisoncor.gui.comboBox.ComboBoxRound cmbAdminMaquinas;
     private javax.swing.JDialog diaAdminClienteTarifa;
     private javax.swing.JDialog diaAdminMaquinaMonitor;
     private com.toedter.calendar.JDateChooser fecha;
-    private javax.swing.JButton jButton1;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -2566,7 +2613,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion2;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre1;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre11;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre12;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre13;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre2;
@@ -2576,6 +2622,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono1;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono2;
+    private org.edisoncor.gui.textField.TextField txtAdminManquinaNombre;
     private org.edisoncor.gui.passwordField.PasswordFieldRound txtLoguinContraseña;
     private org.edisoncor.gui.textField.TextFieldRound txtLoguinUsuario;
     private org.edisoncor.gui.textField.TextField txtapellidosmonitor;

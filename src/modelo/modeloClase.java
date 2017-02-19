@@ -42,11 +42,11 @@ public class modeloClase extends conexion implements interfazClase {
         ResultSet res = cstmt.executeQuery();
          int i=0;
          while(res.next()){
-                
-                data[i][0] = res.getString("idClase");
-                data[i][1] = res.getString("nombre");
-                data[i][2] = res.getString("precio");
-                data[i][3] = res.getString("idMonitor");
+                               
+                data[i][0] = res.getString("c.idClase");
+                data[i][1] = res.getString("c.nombre");
+                data[i][2] = res.getString("c.precio");
+                data[i][3] = res.getString("m.nombre") + " " + res.getString("m.apellidos");
                 
                      
             i++;
@@ -86,19 +86,49 @@ public class modeloClase extends conexion implements interfazClase {
     public DefaultComboBoxModel comboMonitores(){
         DefaultComboBoxModel m = new DefaultComboBoxModel();
         try{
-          PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM monitores");
-          ResultSet res = pstm.executeQuery();
-          
-          while(res.next()){
-              m.addElement(res.getString("idMonitor"));
-              
-          }
+            PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM monitores");
+            ResultSet res = pstm.executeQuery();
+
+            while(res.next()){
+                String nombre = "";
+                String apellidos = "";
+
+                res.getString("nombre");
+                res.getString("apellidos");
+                
+                String monitor = nombre + " - " + apellidos;
+                
+                m.addElement(res.getString("idMonitor") + " - " + res.getString("nombre") + " " + res.getString("apellidos"));
+
+                
+            }
         }catch(SQLException e){
             e.printStackTrace();
             
         }
         return m;
     }
+    
+    @Override
+    public DefaultComboBoxModel comboTablaClases(){
+        DefaultComboBoxModel m = new DefaultComboBoxModel();
+        try{
+            PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM monitores");
+            ResultSet res = pstm.executeQuery();
+
+            while(res.next()){
+                                
+                m.addElement(res.getString("idMonitor"));
+
+                
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+            
+        }
+        return m;
+    }
+    
     @Override
     public boolean eliminarClase(int idClase2){
         boolean res=false;
@@ -144,4 +174,7 @@ public class modeloClase extends conexion implements interfazClase {
         return res;
     }
     
+    public void obtenerIdMonitor (String nombre){
+        
+    }
 }

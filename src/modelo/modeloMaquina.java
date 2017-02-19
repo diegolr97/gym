@@ -43,9 +43,9 @@ public class modeloMaquina extends conexion implements interfazMaquina {
          int i=0;
          while(res.next()){
                 
-                data[i][0] = res.getString("idMaquina");
-                data[i][1] = res.getString("descripcion");
-                data[i][2] = res.getString("idClase");
+                data[i][0] = res.getString("m.idMaquina");
+                data[i][1] = res.getString("m.descripcion");
+                data[i][2] = res.getString("c.nombre");
                 
                 
                      
@@ -88,7 +88,7 @@ public class modeloMaquina extends conexion implements interfazMaquina {
           ResultSet res = pstm.executeQuery();
           
           while(res.next()){
-              m.addElement(res.getString("nombre"));
+              m.addElement(res.getString("idClase") + " - " + res.getString("nombre"));
               
           }
         }catch(SQLException e){
