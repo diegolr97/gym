@@ -36,7 +36,7 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
             
             while (res.next()) //go through each row that your query returns
             {
-                String itemCode = res.getString("idEmpleado"); //get the element in column "item_code"
+                String itemCode = res.getString("idEmpleado") + " - " + res.getString("nombre") + " " + res.getString("apellidos"); 
                 model.addElement(itemCode); //add each item to the model
             }
             
