@@ -30,6 +30,12 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableColumn;
 import modelo.conexion;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 
 
 import org.edisoncor.gui.panel.NewJFrame;
@@ -2395,7 +2401,19 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_buttonAction32ActionPerformed
 
     private void buttonAction9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction9ActionPerformed
-        
+try{
+        conexion cn = new conexion();
+        String dir;
+        dir = "C:\\Users\\diego\\OneDrive\\Documentos\\NetBeansProjects\\StarGym\\src\\reporte\\report1.jrxml";
+        JasperReport reporteJasper = JasperCompileManager.compileReport(dir);
+        JasperPrint mostrarReporte = JasperFillManager.fillReport(reporteJasper, null, cn.getConexion());
+        JasperViewer visor = new JasperViewer(mostrarReporte, false);
+        visor.setVisible(true);
+       
+        }catch(JRException ex){
+            Logger.getLogger(interfaz.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }            
     }//GEN-LAST:event_buttonAction9ActionPerformed
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
