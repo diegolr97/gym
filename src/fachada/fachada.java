@@ -64,6 +64,12 @@ public class fachada {
     public DefaultTableModel listarClientesLetra(String nombre2){
         return cliente.listarClientesLetra(nombre2);
     }
+    public boolean añadirAdministrador(String idEmpleado, String clave, int admin, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+        return cliente.añadirAdministrador(idEmpleado, clave, admin, nombre, apellidos, direccion, telefono, correo, codPostal);
+    }
+    public boolean modificarCliente(String dni, String nombre, String apellidos, String fechaNacimiento, String direccion, int codPostal, String ciudad, int telefono, String correo){
+         return cliente.modificarCliente(dni, nombre, apellidos, fechaNacimiento, direccion, codPostal, ciudad, telefono, correo);
+     }
      
      //-------Aministradores---------//
      
@@ -75,6 +81,14 @@ public class fachada {
     public Administrador datosAdmin(String idEmpleado){
          return admin.datosAdmin(idEmpleado);
      }
+    public boolean modificarEmpleado(String idEmpleado, String clave, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+        return admin.modificarEmpleado(idEmpleado, clave, nombre, apellidos, direccion, telefono, correo, codPostal);
+    }
+
+    public boolean eliminarEmpleado(String idEmpleado2){
+        return admin.eliminarEmpleado(idEmpleado2);
+    }
+    
      
      
      //----------clases-------------//

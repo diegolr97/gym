@@ -1081,11 +1081,17 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Modificar"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction4ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction5">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Eliminar"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction5ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction1">
                           <Properties>
@@ -1099,6 +1105,9 @@
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Guardar"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction3ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1311,6 +1320,9 @@
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Modificar"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction6ActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction7">
                               <Properties>

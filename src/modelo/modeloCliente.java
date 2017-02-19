@@ -228,6 +228,60 @@ public class modeloCliente extends conexion implements interfazCliente {
         return tablemodel;
         
     }
+      @Override
+      public boolean añadirAdministrador(String idEmpleado, String clave, int admin, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+         boolean res=false;
+        
+        try {
+            CallableStatement cstm = this.getConexion().prepareCall("{call añadirEmpleado(?,?,?,?,?,?,?,?,?)}");
+            
+            cstm.setString(1, idEmpleado);
+            cstm.setString(2, clave);
+            cstm.setInt(3, admin);
+            cstm.setString(4, nombre);
+            cstm.setString(5, apellidos);
+            cstm.setString(6, direccion);
+            cstm.setInt(7, telefono);
+            cstm.setString(8, correo);
+            cstm.setFloat(9, codPostal);
+            
+            cstm.executeUpdate();
+            
+            cstm.close();
+            res=true;
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage() + "     \n  " + ex.getSQLState());
+        }
+        return res;
+        }
+      @Override
+     public boolean modificarCliente(String dni, String nombre, String apellidos, String fechaNacimiento, String direccion, int codPostal, String ciudad, int telefono, String correo){
+     boolean res=false;
+        
+        try {
+            CallableStatement cstm = this.getConexion().prepareCall("{call modificarCliente(?,?,?,?,?,?,?,?,?)}");
+            
+            cstm.setString(1, dni);
+            cstm.setString(2, nombre);
+            cstm.setString(3, apellidos);
+            cstm.setString(4, fechaNacimiento);
+            cstm.setString(5, direccion);
+            cstm.setInt(6, codPostal);
+            cstm.setString(7, ciudad);
+            cstm.setInt(8, telefono);
+            cstm.setString(9, correo);
+            cstm.executeUpdate();
+            cstm.close();
+            res=true;
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage() + "     \n  " + ex.getSQLState());
+        }
+        return res;
+        }
         
     }
       

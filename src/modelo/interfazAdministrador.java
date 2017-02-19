@@ -17,6 +17,8 @@ public interface interfazAdministrador {
     
     public DefaultListModel listAdmin();
     public Administrador datosAdmin(String idEmpleado);
+    public boolean eliminarEmpleado(String idEmpleado2);
+    public boolean modificarEmpleado(String idEmpleado, String clave, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal);
     
     
 }

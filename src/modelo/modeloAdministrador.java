@@ -7,6 +7,7 @@ package modelo;
 
 
 import clases.Administrador;
+import java.sql.CallableStatement;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -95,7 +96,56 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
             
         
         }
-    
+    @Override
+public boolean modificarEmpleado(String idEmpleado, String clave, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+        boolean res=false;
+        try {
+            CallableStatement cstm = this.getConexion().prepareCall("{call modificarEmpleado(?,?,?,?,?,?,?,?)}");
+            
+            cstm.setString(1, idEmpleado);
+            cstm.setString(2, clave);
+            cstm.setString(3, nombre);
+            cstm.setString(4, apellidos);
+            cstm.setString(5, direccion);
+            cstm.setInt(6, telefono);
+            cstm.setString(7, correo);
+            cstm.setInt(8, codPostal);
+            
+            
+          
+            
+            cstm.executeUpdate();
+            
+            cstm.close();
+            res=true;
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage() + "     \n  " + ex.getSQLState());
+        }
+        return res;
+    }
+    @Override
+public boolean eliminarEmpleado(String idEmpleado2){
+        boolean res=false;
+        try {
+            //Preparamos la funcion que va a ejecutar la eliminacion
+            CallableStatement cstm = this.getConexion().prepareCall("{call eliminarEmpleado(?)}");
+            //Indicas el tipo de dato que devuelve
+            //Indicas el parametro que le pasas, en este caso el codigo del bar y el dni
+            cstm.setString(1, idEmpleado2);
+            //Ejecutas la funcion
+            cstm.executeUpdate();
+             //Recoges el resultado
+            cstm.close();
+            res=true;
+            
+            
+        } catch (Exception e) {
+        }
+        return res;
+    }
+
    
     
     

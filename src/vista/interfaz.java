@@ -894,8 +894,18 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
 
         buttonAction4.setText("Modificar");
+        buttonAction4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction4ActionPerformed(evt);
+            }
+        });
 
         buttonAction5.setText("Eliminar");
+        buttonAction5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction5ActionPerformed(evt);
+            }
+        });
 
         buttonAction1.setText("Nuevo");
         buttonAction1.addActionListener(new java.awt.event.ActionListener() {
@@ -905,6 +915,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
 
         buttonAction3.setText("Guardar");
+        buttonAction3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1008,6 +1023,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         buttonAction6.setText("Modificar");
+        buttonAction6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction6ActionPerformed(evt);
+            }
+        });
 
         buttonAction7.setText("Eliminar");
         buttonAction7.addActionListener(new java.awt.event.ActionListener() {
@@ -3578,6 +3598,27 @@ try{
     private void tablaTrabCobroMensualKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaTrabCobroMensualKeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_tablaTrabCobroMensualKeyReleased
+
+    private void buttonAction4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction4ActionPerformed
+       f.modificarEmpleado(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
+       this.listaAdmin.setModel(f.listAdmin());
+    }//GEN-LAST:event_buttonAction4ActionPerformed
+
+    private void buttonAction5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction5ActionPerformed
+        f.eliminarEmpleado(txtAdminAdministradorDni.getText());
+        this.listaAdmin.setModel(f.listAdmin());
+    }//GEN-LAST:event_buttonAction5ActionPerformed
+
+    private void buttonAction3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction3ActionPerformed
+       f.añadirAdministrador(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), 1, txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
+       this.listaAdmin.setModel(f.listAdmin());
+    }//GEN-LAST:event_buttonAction3ActionPerformed
+
+    private void buttonAction6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction6ActionPerformed
+        String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha.getDate());
+       f.modificarCliente(txtAdminAdministradorNombre3.getText(), txtAdminAdministradorApellidos3.getText(), txtAdminAdministradorNombre2.getText(), fecha, txtAdminAdministradorDireccion1.getText(), Integer.parseInt(txtAdminAdministradorCodPostal1.getText()), txtAdminAdministradorApellidos2.getText(), Integer.parseInt(txtAdminAdministradorTelefono1.getText()), txtAdminAdministradorCorreo1.getText());
+       this.tablaClientes.setModel(f.listarClientes());
+    }//GEN-LAST:event_buttonAction6ActionPerformed
 
     /**
      * @param args the command line arguments
