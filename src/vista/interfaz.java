@@ -2006,9 +2006,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             //------------------------------------------------------------------------
             this.tablaClases.setModel(f.listarClases());
             
-            TableColumn tc = tablaClases.getColumnModel().getColumn(3);
-            TableCellEditor tce = new DefaultCellEditor(jcb);
-            tc.setCellEditor(tce);
+//            TableColumn tc = tablaClases.getColumnModel().getColumn(3);
+//            TableCellEditor tce = new DefaultCellEditor(jcb);
+//            tc.setCellEditor(tce);
             //------------------------------------------------------------------------
             this.tablaMaquinas.setModel(f.listarMaquinas());
             this.cmbAdminClases.setModel(f.comboMonitores());
@@ -2346,23 +2346,23 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         String idClase=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 0);
         String nombre=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 1);
         String precio=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 2);
-        //String idMonitor=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 3);
+        String idMonitor=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 3);
         
         
-        String idMonitor = jcb.getSelectedItem().toString();
-        String idM = idMonitor.substring(0, 9);
+//        String idMonitor = jcb.getSelectedItem().toString();
+//        String idM = idMonitor.substring(0, 9);
         
         //List<String> l = Arrays.asList(idMonitor.split(" "));
         
         //String idM = l.get(0);
         
-        System.out.println("El idDe monitor de la tabla es: " + idM);
-        f.modificarClase(Integer.parseInt(idClase), nombre, Double.parseDouble(precio), idM);
+//        System.out.println("El idDe monitor de la tabla es: " + idM);
+        f.modificarClase(Integer.parseInt(idClase), nombre, Double.parseDouble(precio), idMonitor);
         
         tablaClases.setModel(f.listarClases());
-        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
-        TableCellEditor tce = new DefaultCellEditor(jcb);
-        tc.setCellEditor(tce);
+//        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
+//        TableCellEditor tce = new DefaultCellEditor(jcb);
+//        tc.setCellEditor(tce);
     }//GEN-LAST:event_tablaClasesKeyReleased
 
     private void tablaClasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClasesMouseClicked
