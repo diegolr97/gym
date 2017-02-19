@@ -3478,13 +3478,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
     private void listaAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaAdminMouseClicked
         // Lista administradores
-        
-         
-        
+
         String admin = listaAdmin.getSelectedValue();
-        System.out.println("El admin es: " + admin);
+        List<String> l = Arrays.asList(admin.split(" "));
         
-        String idAdm = admin.substring(0, 9);
+        String idAdm = l.get(0);
         
         Administrador a= f.datosAdmin(idAdm); 
         
