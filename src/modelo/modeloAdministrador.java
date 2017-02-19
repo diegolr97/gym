@@ -32,7 +32,7 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
     public DefaultListModel listAdmin() {
         DefaultListModel model = new DefaultListModel();
         try {
-           PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM empleado");
+           PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM empleado where admin = 1");
            ResultSet res = pstm.executeQuery();
             
             while (res.next()) //go through each row that your query returns
