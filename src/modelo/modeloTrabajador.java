@@ -6,14 +6,11 @@
 package modelo;
 
 
-import clases.Administrador;
+import clases.Trabajador;
 import java.sql.CallableStatement;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
@@ -22,17 +19,14 @@ import javax.swing.DefaultListModel;
  *
  * @author diego
  */
-public class modeloAdministrador extends conexion implements interfazAdministrador {
+public class modeloTrabajador extends conexion implements interfazTrabajador{
     
-    public modeloAdministrador(){
-        
-    }
-
+    
     @Override
-    public DefaultListModel listAdmin() {
+    public DefaultListModel listTrabajador() {
         DefaultListModel model = new DefaultListModel();
         try {
-           PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM empleado where admin = 1");
+           PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * FROM empleado where admin = 0");
            ResultSet res = pstm.executeQuery();
             
             while (res.next()) //go through each row that your query returns
@@ -49,10 +43,37 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
         }
        return model;
     }
-    
     @Override
-    public Administrador datosAdmin(String idEmpleado) {
-        Administrador a = new Administrador();
+    public boolean añadirTrabajador(String idEmpleado, String clave, int admin, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+         boolean res=false;
+        
+        try {
+            CallableStatement cstm = this.getConexion().prepareCall("{call añadirEmpleado(?,?,?,?,?,?,?,?,?)}");
+            
+            cstm.setString(1, idEmpleado);
+            cstm.setString(2, clave);
+            cstm.setInt(3, admin);
+            cstm.setString(4, nombre);
+            cstm.setString(5, apellidos);
+            cstm.setString(6, direccion);
+            cstm.setInt(7, telefono);
+            cstm.setString(8, correo);
+            cstm.setFloat(9, codPostal);
+            
+            cstm.executeUpdate();
+            
+            cstm.close();
+            res=true;
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage() + "     \n  " + ex.getSQLState());
+        }
+        return res;
+        }
+    @Override
+    public Trabajador datosTrabajador(String idEmpleado) {
+        Trabajador t = new Trabajador();
            try {
             PreparedStatement pstm = this.getConexion().prepareStatement("SELECT idEmpleado, clave, nombre, apellidos, direccion, telefono, correo, codPostal from empleado where idEmpleado ='" + idEmpleado + "' " );
             ResultSet res = pstm.executeQuery();
@@ -68,18 +89,14 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
             String correo= res.getString("correo");
             int codPostal= res.getInt("codPostal");
             
-            
-            
-           
-            
-            a.setIdEmpleado(idEmpleado2);
-            a.setClave(clave);
-            a.setNombre(nombre);
-            a.setApellidos(apellidos);
-            a.setDireccion(direccion);
-            a.setTelefono(telefono);
-            a.setCorreo(correo);
-            a.setCodPostal(codPostal);
+            t.setIdEmpleado(idEmpleado2);
+            t.setClave(clave);
+            t.setNombre(nombre);
+            t.setApellidos(apellidos);
+            t.setDireccion(direccion);
+            t.setTelefono(telefono);
+            t.setCorreo(correo);
+            t.setCodPostal(codPostal);
             
             
             
@@ -91,13 +108,33 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
                Logger.getLogger(modeloCliente.class.getName()).log(Level.SEVERE, null, ex);
                
            } 
-           return a;
+           return t;
         
             
         
         }
     @Override
-      public boolean modificarEmpleado(String idEmpleado, String clave, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+        public boolean eliminarTrabajador(String idEmpleado2){
+        boolean res=false;
+        try {
+            //Preparamos la funcion que va a ejecutar la eliminacion
+            CallableStatement cstm = this.getConexion().prepareCall("{call eliminarEmpleado(?)}");
+            //Indicas el tipo de dato que devuelve
+            //Indicas el parametro que le pasas, en este caso el codigo del bar y el dni
+            cstm.setString(1, idEmpleado2);
+            //Ejecutas la funcion
+            cstm.executeUpdate();
+             //Recoges el resultado
+            cstm.close();
+            res=true;
+            
+            
+        } catch (Exception e) {
+        }
+        return res;
+    }
+        @Override
+      public boolean modificarTrabajador(String idEmpleado, String clave, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
         boolean res=false;
         try {
             CallableStatement cstm = this.getConexion().prepareCall("{call modificarEmpleado(?,?,?,?,?,?,?,?)}");
@@ -125,29 +162,5 @@ public class modeloAdministrador extends conexion implements interfazAdministrad
         }
         return res;
     }
-    @Override
-public boolean eliminarEmpleado(String idEmpleado2){
-        boolean res=false;
-        try {
-            //Preparamos la funcion que va a ejecutar la eliminacion
-            CallableStatement cstm = this.getConexion().prepareCall("{call eliminarEmpleado(?)}");
-            //Indicas el tipo de dato que devuelve
-            //Indicas el parametro que le pasas, en este caso el codigo del bar y el dni
-            cstm.setString(1, idEmpleado2);
-            //Ejecutas la funcion
-            cstm.executeUpdate();
-             //Recoges el resultado
-            cstm.close();
-            res=true;
-            
-            
-        } catch (Exception e) {
-        }
-        return res;
-    }
-
-   
-    
-    
     
 }

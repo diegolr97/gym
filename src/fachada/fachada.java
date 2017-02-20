@@ -6,6 +6,7 @@
 package fachada;
 
 import clases.Administrador;
+import clases.Trabajador;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +19,14 @@ import modelo.interfazCliente;
 import modelo.interfazLogin;
 import modelo.interfazMaquina;
 import modelo.interfazMonitor;
+import modelo.interfazTrabajador;
 import modelo.login;
 import modelo.modeloAdministrador;
 import modelo.modeloClase;
 import modelo.modeloCliente;
 import modelo.modeloMaquina;
 import modelo.modeloMonitor;
+import modelo.modeloTrabajador;
 
 /**
  *
@@ -153,6 +156,25 @@ public class fachada {
         }
       public boolean modificarMonitor(String idMonitor, String nombre, String apellidos, int telefono, String correo){
           return monitor.modificarMonitor(idMonitor, nombre, apellidos, telefono, correo);
+      }
+      
+      //---------trabajadores-----------//
+      private interfazTrabajador trabajador = new modeloTrabajador();
+      
+      public DefaultListModel listTrabajador(){
+          return trabajador.listTrabajador();
+      }
+      public boolean añadirTrabajador(String idEmpleado, String clave, int admin, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+          return trabajador.añadirTrabajador(idEmpleado, clave, admin, nombre, apellidos, direccion, telefono, correo, codPostal);
+      }
+      public Trabajador datosTrabajador(String idEmpleado){
+          return trabajador.datosTrabajador(idEmpleado);
+      }
+      public boolean eliminarTrabajador(String idEmpleado2){
+          return trabajador.eliminarTrabajador(idEmpleado2);
+      }
+      public boolean modificarTrabajador(String idEmpleado, String clave, String nombre, String apellidos, String direccion, int telefono, String correo, int codPostal){
+          return trabajador.modificarTrabajador(idEmpleado, clave, nombre, apellidos, direccion, telefono, correo, codPostal);
       }
      
     

@@ -7,6 +7,7 @@ package vista;
 
 
 import clases.Administrador;
+import clases.Trabajador;
 import fachada.fachada;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
@@ -235,7 +236,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         panelAdminTrabajador = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        listaTrabajadores = new javax.swing.JList<>();
         jPanel8 = new javax.swing.JPanel();
         labelMetric24 = new org.edisoncor.gui.label.LabelMetric();
         jPanel9 = new javax.swing.JPanel();
@@ -756,11 +757,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        listaAdmin.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         listaAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 listaAdminMouseClicked(evt);
@@ -1255,12 +1251,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+        listaTrabajadores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listaTrabajadoresMouseClicked(evt);
+            }
         });
-        jScrollPane6.setViewportView(jList3);
+        jScrollPane6.setViewportView(listaTrabajadores);
 
         jPanel8.setBackground(new java.awt.Color(0, 0, 0));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -1273,12 +1269,27 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         buttonAction11.setText("Modificar");
+        buttonAction11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction11ActionPerformed(evt);
+            }
+        });
 
         buttonAction12.setText("Eliminar");
+        buttonAction12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction12ActionPerformed(evt);
+            }
+        });
 
         buttonAction13.setText("Nuevo");
 
         buttonAction14.setText("Guardar");
+        buttonAction14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction14ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -2941,45 +2952,45 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         //Boton loguin entrar        
 
 //        if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==1){
-//            panelLoguin.setVisible(false);
-//            avatarAdmin.setVisible(true);
-//            panelAdmin.setVisible(true);
-//            panelAdminAdmin.setVisible(false);
-//            panelAdminClase.setVisible(false);
-//            panelAdminCliente.setVisible(false);
-//            panelAdminMaquina.setVisible(false);
-//            panelAdminTrabajador.setVisible(false);
-//            
-//            avatarTrab.setVisible(false);
-//            panelTrab.setVisible(false);
-//            panelTrabPerfil.setVisible(false);
-//            panelTrabCliente.setVisible(false);
-//            panelTrabMatricula.setVisible(false);
-//            panelTrabCobro.setVisible(false);
-//            
-//            //Colocar en el label superior izquierdo el identificador
-//            lblAdministrador.setText(txtLoguinUsuario.getText());
-            
-//        }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
             panelLoguin.setVisible(false);
-            avatarTrab.setVisible(true);
-            panelTrab.setVisible(true);
-            panelTrabPerfil.setVisible(false);
-            panelTrabCliente.setVisible(false);
-            panelTrabMatricula.setVisible(false);
-            panelTrabCobro.setVisible(false);
-            
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(false);
+            avatarAdmin.setVisible(true);
+            panelAdmin.setVisible(true);
             panelAdminAdmin.setVisible(false);
             panelAdminClase.setVisible(false);
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(false);
             
+            avatarTrab.setVisible(false);
+            panelTrab.setVisible(false);
+            panelTrabPerfil.setVisible(false);
+            panelTrabCliente.setVisible(false);
+            panelTrabMatricula.setVisible(false);
+            panelTrabCobro.setVisible(false);
+            
             //Colocar en el label superior izquierdo el identificador
-            lblTrabajador.setText(txtLoguinUsuario.getText());  
+            lblAdministrador.setText(txtLoguinUsuario.getText());
+            
+//        }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
+//            panelLoguin.setVisible(false);
+//            avatarTrab.setVisible(true);
+//            panelTrab.setVisible(true);
+//            panelTrabPerfil.setVisible(false);
+//            panelTrabCliente.setVisible(false);
+//            panelTrabMatricula.setVisible(false);
+//            panelTrabCobro.setVisible(false);
+//            
+//            panelLoguin.setVisible(false);
+//            avatarAdmin.setVisible(false);
+//            panelAdmin.setVisible(false);
+//            panelAdminAdmin.setVisible(false);
+//            panelAdminClase.setVisible(false);
+//            panelAdminCliente.setVisible(false);
+//            panelAdminMaquina.setVisible(false);
+//            panelAdminTrabajador.setVisible(false);
+//            
+//            //Colocar en el label superior izquierdo el identificador
+//            lblTrabajador.setText(txtLoguinUsuario.getText());  
 //        }else{
 //           JOptionPane.showMessageDialog(null, "Datos incorrectos");
 //        }
@@ -3022,6 +3033,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(true);
+            this.listaTrabajadores.setModel(f.listTrabajador());
         }
         
         if(avatarAdmin.getSelectedtitulo().equals("Maquinas")){
@@ -3620,6 +3632,42 @@ try{
        this.tablaClientes.setModel(f.listarClientes());
     }//GEN-LAST:event_buttonAction6ActionPerformed
 
+    private void buttonAction14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction14ActionPerformed
+        f.añadirTrabajador(txtAdminAdministradorNombre5.getText(), passwordField1.getText(), 0, txtAdminAdministradorNombre4.getText(), txtAdminAdministradorApellidos5.getText(), txtAdminAdministradorDireccion2.getText(), Integer.parseInt(txtAdminAdministradorTelefono2.getText()), txtAdminAdministradorCorreo2.getText(),Integer.parseInt(txtAdminAdministradorCodPostal2.getText()));
+        this.listaTrabajadores.setModel(f.listTrabajador());
+    }//GEN-LAST:event_buttonAction14ActionPerformed
+
+    private void listaTrabajadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaTrabajadoresMouseClicked
+         String trabajador = listaTrabajadores.getSelectedValue();
+        List<String> l = Arrays.asList(trabajador.split(" "));
+        
+        String idTra = l.get(0);
+        
+        Trabajador t= f.datosTrabajador(idTra); 
+        
+        System.out.println("La id del admin es: " + idTra);
+        
+        this.txtAdminAdministradorNombre5.setText(t.getIdEmpleado());
+        this.txtAdminAdministradorNombre4.setText(t.getNombre());
+        this.txtAdminAdministradorDireccion2.setText(t.getDireccion());
+        this.txtAdminAdministradorTelefono2.setText(String.valueOf(t.getTelefono()));
+        
+        this.passwordField1.setText(t.getClave());
+        this.txtAdminAdministradorApellidos5.setText(t.getApellidos());
+        this.txtAdminAdministradorCodPostal2.setText(String.valueOf(t.getCodPostal()));
+        this.txtAdminAdministradorCorreo2.setText(t.getCorreo());       
+    }//GEN-LAST:event_listaTrabajadoresMouseClicked
+
+    private void buttonAction12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction12ActionPerformed
+        f.eliminarTrabajador(txtAdminAdministradorNombre5.getText());
+        this.listaTrabajadores.setModel(f.listTrabajador());
+    }//GEN-LAST:event_buttonAction12ActionPerformed
+
+    private void buttonAction11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction11ActionPerformed
+        f.modificarTrabajador(txtAdminAdministradorNombre5.getText(), passwordField1.getText(), txtAdminAdministradorNombre4.getText(), txtAdminAdministradorApellidos5.getText(), txtAdminAdministradorDireccion2.getText(), Integer.parseInt(txtAdminAdministradorTelefono2.getText()), txtAdminAdministradorCorreo2.getText(),Integer.parseInt(txtAdminAdministradorCodPostal2.getText()));
+        this.listaTrabajadores.setModel(f.listTrabajador());
+    }//GEN-LAST:event_buttonAction11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3721,7 +3769,6 @@ try{
     private javax.swing.JLabel jLabel5;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
     private javax.swing.JList<String> jList5;
     private javax.swing.JPanel jPanel1;
@@ -3869,6 +3916,7 @@ try{
     private javax.swing.JList<String> listaAdmin;
     private javax.swing.JList<String> listaClientes;
     private javax.swing.JList<String> listaClientes1;
+    private javax.swing.JList<String> listaTrabajadores;
     private javax.swing.JPanel panelAdmin;
     private javax.swing.JPanel panelAdminAdmin;
     private javax.swing.JPanel panelAdminClase;
