@@ -379,7 +379,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         txtAdminAdministradorNombre11 = new org.edisoncor.gui.textField.TextField();
         labelMetric79 = new org.edisoncor.gui.label.LabelMetric();
         passwordField2 = new org.edisoncor.gui.passwordField.PasswordField();
-        fecha3 = new com.toedter.calendar.JDateChooser();
+        fecha2 = new com.toedter.calendar.JDateChooser();
         txtAdminAdministradorCorreo7 = new org.edisoncor.gui.textField.TextField();
         labelMetric80 = new org.edisoncor.gui.label.LabelMetric();
         jPanel25 = new javax.swing.JPanel();
@@ -2567,7 +2567,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         txtAdminAdministradorCorreo7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        labelMetric80.setText("Correo:");
+        labelMetric80.setText("Ciudad:");
         labelMetric80.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
@@ -2619,7 +2619,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(labelMetric75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(4, 4, 4)
-                                .addComponent(fecha3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(fecha2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(19, 19, 19)))))
                 .addGap(27, 27, 27))
         );
@@ -2648,7 +2648,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelMetric75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fecha3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fecha2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtAdminAdministradorDireccion5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3899,8 +3899,8 @@ try{
     }//GEN-LAST:event_buttonAction28ActionPerformed
 
     private void buttonAction39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction39ActionPerformed
-        String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha1.getDate());
-       // f.añadirCliente(txtAdminAdministradorNombre11.getText(), passwordField2.getText(), txtAdminAdministradorNombre10.getText(), fecha, txtAdminAdministradorDireccion5.getText(), Integer.parseInt(txtAdminAdministradorCodPostal5.getText()), txtAdminAdministradorTelefono7.getText(), Integer.parseInt(txtAdminAdministradorTelefono5.getText()), txtAdminAdministradorCorreo5.getText());
+        String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha2.getDate());
+        f.añadirCliente(txtAdminAdministradorNombre11.getText(), passwordField2.getText(), txtAdminAdministradorNombre10.getText(), fecha, txtAdminAdministradorDireccion5.getText(), Integer.parseInt(txtAdminAdministradorCodPostal5.getText()), txtAdminAdministradorCorreo7.getText(), Integer.parseInt(txtAdminAdministradorTelefono5.getText()), txtAdminAdministradorCorreo5.getText());
     }//GEN-LAST:event_buttonAction39ActionPerformed
 
     /**
@@ -3993,7 +3993,7 @@ try{
     private org.edisoncor.gui.label.LabelTask dniTrabajador;
     private com.toedter.calendar.JDateChooser fecha;
     private com.toedter.calendar.JDateChooser fecha1;
-    private com.toedter.calendar.JDateChooser fecha3;
+    private com.toedter.calendar.JDateChooser fecha2;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

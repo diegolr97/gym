@@ -3970,7 +3970,7 @@
                                                   <EmptySpace max="32767" attributes="0"/>
                                                   <Component id="labelMetric75" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                                                  <Component id="fecha3" min="-2" pref="158" max="-2" attributes="0"/>
+                                                  <Component id="fecha2" min="-2" pref="158" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -4011,7 +4011,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="labelMetric75" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="fecha3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fecha2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
@@ -4163,7 +4163,7 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="com.toedter.calendar.JDateChooser" name="fecha3">
+                        <Component class="com.toedter.calendar.JDateChooser" name="fecha2">
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorCorreo7">
                           <Properties>
@@ -4174,7 +4174,7 @@
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric80">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Correo:"/>
+                            <Property name="text" type="java.lang.String" value="Ciudad:"/>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
