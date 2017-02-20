@@ -3457,6 +3457,8 @@ try{
             panelTrabMatricula.setVisible(false);
             panelTrabCobro.setVisible(false);
             
+            this.tablaClientes2.setModel(f.listarClientes());
+            
         }
         
         if(avatarTrab.getSelectedtitulo().equals("Matricula")){
