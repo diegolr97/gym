@@ -2802,7 +2802,7 @@
                 <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Component class="org.edisoncor.gui.label.LabelTask" name="labelTask5">
+                <Component class="org.edisoncor.gui.label.LabelTask" name="dniTrabajador">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3028,6 +3028,7 @@
                     </Component>
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorNombre17">
                       <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial" size="18" style="1"/>
                         </Property>
@@ -3125,6 +3126,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction21ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction25">
                       <Properties>

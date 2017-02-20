@@ -16,8 +16,8 @@ import java.sql.SQLException;
 public class login extends conexion implements interfazLogin {
     
     @Override
-    public int iniciarSesion(String Nombre, String Contraseña) {
-        String nombre= "";
+    public int iniciarSesion(String DNI, String Contraseña) {
+        String dni= "";
         String contraseña = "";
         int admin = 0;
         int comp= 2;
@@ -30,17 +30,17 @@ public class login extends conexion implements interfazLogin {
             
             while (res.next()) {
                 //recorre uno a uno el Nombre y la Contraseña de cada Medico
-                nombre = res.getString("nombre");
+                dni = res.getString("idEmpleado");
                 contraseña = res.getString("clave");
                 admin = res.getInt("admin");
                 //Si coincide los datos puesto con los datos de la base de datos
                 //puedes entrar al menu
                 
-                 if(nombre.equals(Nombre) && contraseña.equals(Contraseña) && admin == 1){
+                 if(dni.equals(DNI) && contraseña.equals(Contraseña) && admin == 1){
               
                     comp = 1;
                     
-                }else if(nombre.equals(Nombre) && contraseña.equals(Contraseña) && admin == 0){
+                }else if(dni.equals(DNI) && contraseña.equals(Contraseña) && admin == 0){
                     comp=0;
                     
                      

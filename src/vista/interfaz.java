@@ -300,7 +300,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         avatarTrab = new org.edisoncor.gui.panel.PanelAvatarChooser();
         btnTrabIpod = new org.edisoncor.gui.button.ButtonIpod();
         panelTrabPerfil = new javax.swing.JPanel();
-        labelTask5 = new org.edisoncor.gui.label.LabelTask();
+        dniTrabajador = new org.edisoncor.gui.label.LabelTask();
         jPanel31 = new javax.swing.JPanel();
         labelMetric89 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric90 = new org.edisoncor.gui.label.LabelMetric();
@@ -1950,11 +1950,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         panelTrabPerfil.setPreferredSize(new java.awt.Dimension(1140, 628));
         panelTrabPerfil.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        labelTask5.setForeground(new java.awt.Color(255, 255, 255));
-        labelTask5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/admin42.png"))); // NOI18N
-        labelTask5.setText("Mi Perfil");
-        labelTask5.setDescription(" ");
-        panelTrabPerfil.add(labelTask5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        dniTrabajador.setForeground(new java.awt.Color(255, 255, 255));
+        dniTrabajador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/admin42.png"))); // NOI18N
+        dniTrabajador.setText("Mi Perfil");
+        dniTrabajador.setDescription(" ");
+        panelTrabPerfil.add(dniTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
 
         jPanel31.setBackground(new java.awt.Color(0, 0, 0));
         jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
@@ -1992,6 +1992,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric95.setText("Dni:");
         labelMetric95.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
+        txtAdminAdministradorNombre17.setEditable(false);
         txtAdminAdministradorNombre17.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         labelMetric96.setText("Contraseña:");
@@ -2088,6 +2089,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
 
         buttonAction21.setText("Modificar");
+        buttonAction21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction21ActionPerformed(evt);
+            }
+        });
 
         buttonAction25.setText("Guardar");
 
@@ -3421,6 +3427,25 @@ try{
             panelTrabCliente.setVisible(false);
             panelTrabMatricula.setVisible(false);
             panelTrabCobro.setVisible(false);
+            //diego
+            String idTra= lblTrabajador.getText();
+            Trabajador t= f.datosTrabajador(idTra);
+            
+            System.out.println("La id del admin es: " + idTra);
+        
+            this.txtAdminAdministradorNombre17.setText(t.getIdEmpleado());
+            this.txtAdminAdministradorNombre16.setText(t.getNombre());
+            this.dniTrabajador.setText(t.getNombre());
+            this.txtAdminAdministradorDireccion6.setText(t.getDireccion());
+            this.txtAdminAdministradorTelefono6.setText(String.valueOf(t.getTelefono()));
+            
+        
+            this.txtAdminAdministradorApellidos11.setText(t.getClave());
+            this.txtAdminAdministradorApellidos10.setText(t.getApellidos());
+            this.txtAdminAdministradorCodPostal6.setText(String.valueOf(t.getCodPostal()));
+            this.txtAdminAdministradorCorreo6.setText(t.getCorreo());
+            
+            
         }
         
         if(avatarTrab.getSelectedtitulo().equals("Clientes")){
@@ -3824,6 +3849,10 @@ try{
         txtAdminClasesPrecio.setText("");
     }//GEN-LAST:event_buttonAction17ActionPerformed
 
+    private void buttonAction21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction21ActionPerformed
+        f.modificarTrabajador(txtAdminAdministradorNombre17.getText(), txtAdminAdministradorApellidos11.getText(), txtAdminAdministradorNombre16.getText(), txtAdminAdministradorApellidos10.getText(), txtAdminAdministradorDireccion6.getText(), Integer.parseInt(txtAdminAdministradorTelefono6.getText()), txtAdminAdministradorCorreo6.getText(), Integer.parseInt(txtAdminAdministradorCodPostal6.getText()));
+    }//GEN-LAST:event_buttonAction21ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3914,6 +3943,7 @@ try{
     private org.edisoncor.gui.comboBox.ComboBoxRound cmbAdminMaquinas;
     private javax.swing.JDialog diaAdminClienteTarifa;
     private javax.swing.JDialog diaAdminMaquinaMonitor;
+    private org.edisoncor.gui.label.LabelTask dniTrabajador;
     private com.toedter.calendar.JDateChooser fecha;
     private com.toedter.calendar.JDateChooser fecha1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
@@ -4062,7 +4092,6 @@ try{
     private org.edisoncor.gui.label.LabelTask labelTask2;
     private org.edisoncor.gui.label.LabelTask labelTask3;
     private org.edisoncor.gui.label.LabelTask labelTask4;
-    private org.edisoncor.gui.label.LabelTask labelTask5;
     private org.edisoncor.gui.label.LabelTask labelTask6;
     private org.edisoncor.gui.label.LabelTask labelTask7;
     private org.edisoncor.gui.label.LabelMetric lblAdministrador;
