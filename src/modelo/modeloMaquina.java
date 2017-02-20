@@ -117,5 +117,29 @@ public class modeloMaquina extends conexion implements interfazMaquina {
         }
         return res;
     }
-    
+    @Override
+    public boolean modificarMaquina(int idMaquina, int idClase, String descripcion){
+        boolean res=false;
+        try {
+            CallableStatement cstm = this.getConexion().prepareCall("{call modificarMaquina(?,?,?)}");
+            
+            cstm.setInt(1, idMaquina);
+            cstm.setInt(2, idClase);
+            cstm.setString(3, descripcion);
+            
+          
+            
+            cstm.executeUpdate();
+            
+            cstm.close();
+            res=true;
+            
+        } catch (SQLException ex) {
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage() + "     \n  " + ex.getSQLState());
+        }
+        return res;
+    }
 }
+    
+

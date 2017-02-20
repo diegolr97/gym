@@ -138,6 +138,9 @@ public class fachada {
      public boolean eliminarMaquina(int idMaquina){
          return maquina.eliminarMaquina(idMaquina);
      }
+     public boolean modificarMaquina(int idMaquina, int idClase, String descripcion){
+         return maquina.modificarMaquina(idMaquina, idClase, descripcion);
+     }
      
      //-------monitores------------//
      

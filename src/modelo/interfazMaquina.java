@@ -17,4 +17,5 @@ public interface interfazMaquina {
     public boolean añadirMaquina(int idClase, String descripcion);
     public DefaultComboBoxModel comboClases();
     public boolean eliminarMaquina(int idMaquina);
+    public boolean modificarMaquina(int idMaquina, int idClase, String descripcion);
 }

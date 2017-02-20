@@ -259,8 +259,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric31 = new org.edisoncor.gui.label.LabelMetric();
         txtAdminAdministradorNombre5 = new org.edisoncor.gui.textField.TextField();
         labelMetric32 = new org.edisoncor.gui.label.LabelMetric();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        tablaClientes1 = new javax.swing.JTable();
         passwordField1 = new org.edisoncor.gui.passwordField.PasswordField();
         labelTask3 = new org.edisoncor.gui.label.LabelTask();
         panelAdminMaquina = new javax.swing.JPanel();
@@ -1365,32 +1363,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric32.setText("Contraseña:");
         labelMetric32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        tablaClientes1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tablaClientes1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tablaClientes1MouseClicked(evt);
-            }
-        });
-        tablaClientes1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                tablaClientes1KeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                tablaClientes1KeyReleased(evt);
-            }
-        });
-        jScrollPane10.setViewportView(tablaClientes1);
-
         passwordField1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -1437,9 +1409,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                         .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                        .addGap(17, 647, Short.MAX_VALUE)
                         .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -1474,10 +1444,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                     .addComponent(txtAdminAdministradorTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAdminAdministradorCorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(106, 106, 106)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1543,6 +1511,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         buttonAction31.setText("Modificar");
+        buttonAction31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction31ActionPerformed(evt);
+            }
+        });
 
         buttonAction32.setText("Eliminar");
         buttonAction32.addActionListener(new java.awt.event.ActionListener() {
@@ -1709,6 +1682,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         buttonAction15.setText("Modificar");
+        buttonAction15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction15ActionPerformed(evt);
+            }
+        });
 
         buttonAction16.setText("Eliminar");
         buttonAction16.addActionListener(new java.awt.event.ActionListener() {
@@ -3277,18 +3255,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         }
     }//GEN-LAST:event_tablaClientesKeyPressed
 
-    private void tablaClientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClientes1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tablaClientes1MouseClicked
-
-    private void tablaClientes1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClientes1KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tablaClientes1KeyPressed
-
-    private void tablaClientes1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClientes1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tablaClientes1KeyReleased
-
     private void txtAdminAdministradorNombre5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorNombre5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAdminAdministradorNombre5ActionPerformed
@@ -3331,6 +3297,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     String correo=(String) tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 4);
     
     f.modificarMonitor(dni, nombre, apellidos, Integer.parseInt(telefono), correo);
+    this.tablaClases.setModel(f.listarClases());
     }//GEN-LAST:event_tbMonitoresKeyReleased
 
     private void buttonAction18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction18ActionPerformed
@@ -3342,26 +3309,29 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         f.añadirClase(this.txtAdminAdministradorNombre12.getText(), Double.parseDouble(this.txtAdminAdministradorNombre13.getText()), dniM);
         
         this.tablaClases.setModel(f.listarClases());
-        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
-        TableCellEditor tce = new DefaultCellEditor(jcb);
-        tc.setCellEditor(tce);
+//        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
+//        TableCellEditor tce = new DefaultCellEditor(jcb);
+//        tc.setCellEditor(tce);
         
         this.cmbAdminMaquinas.setModel(f.comboClases());
     }//GEN-LAST:event_buttonAction18ActionPerformed
 
     private void buttonAction16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction16ActionPerformed
         String id;
-        id= String.valueOf( this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 0) ); 
+        id= String.valueOf( this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 0)); 
         f.eliminarClase(Integer.parseInt(id));
         this.tablaClases.setModel(f.listarClases());
     }//GEN-LAST:event_buttonAction16ActionPerformed
 
     private void tablaClasesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClasesKeyReleased
         //key released tabla clases
-        String idClase=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 0);
-        String nombre=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 1);
-        String precio=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 2);
-        String idMonitor=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 3);
+//        String idClase=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 0);
+//        String nombre=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 1);
+//        String precio=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 2);
+//        String idMonitor=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 3);
+//        f.modificarClase(Integer.parseInt(idClase), nombre, Double.parseDouble(precio), idMonitor);
+//        
+//        tablaClases.setModel(f.listarClases());
         
         
 //        String idMonitor = jcb.getSelectedItem().toString();
@@ -3372,9 +3342,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         //String idM = l.get(0);
         
 //        System.out.println("El idDe monitor de la tabla es: " + idM);
-        f.modificarClase(Integer.parseInt(idClase), nombre, Double.parseDouble(precio), idMonitor);
         
-        tablaClases.setModel(f.listarClases());
 //        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
 //        TableCellEditor tce = new DefaultCellEditor(jcb);
 //        tc.setCellEditor(tce);
@@ -3404,7 +3372,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_cmbAdminClasesActionPerformed
 
     private void buttonAction32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction32ActionPerformed
-       String idMaquina= (String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
+        String idMaquina= (String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
         f.eliminarMaquina(Integer.parseInt(idMaquina));
         this.tablaMaquinas.setModel(f.listarMaquinas());
     }//GEN-LAST:event_buttonAction32ActionPerformed
@@ -3437,7 +3405,7 @@ try{
 
     private void tablaMaquinasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMaquinasMouseClicked
         //admin tabla maquinas
-        //txtAdminManquinaNombre.setText((String) this.tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 1));
+        this.txtAdminManquinaNombre.setText((String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 1));
     }//GEN-LAST:event_tablaMaquinasMouseClicked
 
     private void buttonAction33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction33ActionPerformed
@@ -3668,6 +3636,28 @@ try{
         this.listaTrabajadores.setModel(f.listTrabajador());
     }//GEN-LAST:event_buttonAction11ActionPerformed
 
+    private void buttonAction15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction15ActionPerformed
+        
+        String idClase=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 0);
+        
+        String dniMonitor = (String)this.cmbAdminClases.getSelectedItem();
+        String dniM = dniMonitor.substring(0, 9);
+        System.out.println("El dni del monitor es: " + dniM);
+        f.modificarClase(Integer.parseInt(idClase), txtAdminAdministradorNombre12.getText(),  Double.parseDouble(txtAdminAdministradorNombre13.getText()), dniM);
+        this.tablaClases.setModel(f.listarClases());
+        this.cmbAdminMaquinas.setModel(f.comboClases());
+    }//GEN-LAST:event_buttonAction15ActionPerformed
+
+    private void buttonAction31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction31ActionPerformed
+        String idClaseProv = cmbAdminMaquinas.getSelectedItem().toString();
+        List<String> l = Arrays.asList(idClaseProv.split(" "));
+        int idClase = Integer.parseInt(l.get(0));
+        System.out.println("la Id es: " + idClase);
+        String idMaquina=(String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
+        f.modificarMaquina(Integer.parseInt(idMaquina), idClase , txtAdminManquinaNombre.getText());
+        this.tablaMaquinas.setModel(f.listarMaquinas());
+    }//GEN-LAST:event_buttonAction31ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3798,7 +3788,6 @@ try{
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
@@ -3935,7 +3924,6 @@ try{
     private org.edisoncor.gui.tabbedPane.TabbedPaneTask tabbedPaneTask1;
     private javax.swing.JTable tablaClases;
     private javax.swing.JTable tablaClientes;
-    private javax.swing.JTable tablaClientes1;
     private javax.swing.JTable tablaClientes2;
     private javax.swing.JTable tablaMaquinas;
     private javax.swing.JTable tablaTrabCobroCliente;

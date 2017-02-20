@@ -29,7 +29,7 @@ public class conexion {
          //obtenemos la database (conexión)
          conn = DriverManager.getConnection( this.url, this.user , this.password );
          
-           System.out.println("hola pa ti mi cola");
+           System.out.println("conexion exitosa");
       }catch(SQLException e){
          System.err.println( e.getMessage() );
       }catch(ClassNotFoundException e){
