@@ -379,7 +379,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         txtAdminAdministradorNombre11 = new org.edisoncor.gui.textField.TextField();
         labelMetric79 = new org.edisoncor.gui.label.LabelMetric();
         passwordField2 = new org.edisoncor.gui.passwordField.PasswordField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        fecha3 = new com.toedter.calendar.JDateChooser();
         jPanel25 = new javax.swing.JPanel();
         buttonAction39 = new org.edisoncor.gui.button.ButtonAction();
         buttonAction48 = new org.edisoncor.gui.button.ButtonAction();
@@ -1475,7 +1475,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addContainerGap()
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -1484,7 +1484,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane6)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2176,6 +2176,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         buttonAction28.setText("Modificar");
+        buttonAction28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction28ActionPerformed(evt);
+            }
+        });
 
         buttonAction29.setText("Eliminar");
         buttonAction29.addActionListener(new java.awt.event.ActionListener() {
@@ -2243,6 +2248,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric62.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         txtAdminAdministradorNombre8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtAdminAdministradorNombre8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAdminAdministradorNombre8ActionPerformed(evt);
+            }
+        });
 
         txtAdminAdministradorDireccion4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminAdministradorDireccion4.addActionListener(new java.awt.event.ActionListener() {
@@ -2598,7 +2608,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                             .addGroup(jPanel24Layout.createSequentialGroup()
                                 .addComponent(labelMetric75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(4, 4, 4)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(fecha3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel24Layout.setVerticalGroup(
@@ -2624,7 +2634,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                         .addComponent(labelMetric75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(fecha3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtAdminAdministradorDireccion5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2650,6 +2660,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         buttonAction39.setText("Realizar");
+        buttonAction39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction39ActionPerformed(evt);
+            }
+        });
 
         buttonAction48.setText("Nueva");
 
@@ -3484,7 +3499,14 @@ try{
     }//GEN-LAST:event_avatarTrabKeyPressed
 
     private void buttonAction29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction29ActionPerformed
-        // TODO add your handling code here:
+         if (tablaClientes2.getSelectedRow() > -1) {
+            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?, se eliminaran las matriculas correspondientes")==0){
+                f.eliminarCliente((String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 0));
+                this.tablaClientes2.setModel(f.listarClientes());
+            }
+            }else{
+             JOptionPane.showMessageDialog(null, "Seleccione una fila");
+         }
     }//GEN-LAST:event_buttonAction29ActionPerformed
 
     private void btnTrabClienteMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabClienteMatriculaActionPerformed
@@ -3508,7 +3530,14 @@ try{
     }//GEN-LAST:event_txtAdminAdministradorApellidos8ActionPerformed
 
     private void tablaClientes2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClientes2MouseClicked
-        // TODO add your handling code here:
+        this.txtAdminAdministradorNombre9.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 0));
+        this.txtAdminAdministradorApellidos8.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 1));
+        this.txtAdminAdministradorNombre8.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 2));
+        this.txtAdminAdministradorDireccion4.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 3));
+        this.txtAdminAdministradorApellidos7.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 4));
+        this.txtAdminAdministradorCodPostal4.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 5));
+        this.txtAdminAdministradorTelefono4.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 6));
+        this.txtAdminAdministradorCorreo4.setText((String) this.tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 8));
     }//GEN-LAST:event_tablaClientes2MouseClicked
 
     private void tablaClientes2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClientes2KeyPressed
@@ -3516,7 +3545,22 @@ try{
     }//GEN-LAST:event_tablaClientes2KeyPressed
 
     private void tablaClientes2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClientes2KeyReleased
-        // TODO add your handling code here:
+        String dni=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 0);
+        String nombre=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 1);
+        String apellidos=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 2);
+        String fechaNacimiento=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(),7);
+        String direccion=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 3);
+        String codPostal=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 5);
+        String ciudad=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 4);
+        String telefono=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 6);
+        String correo=(String) tablaClientes2.getValueAt(tablaClientes2.getSelectedRow(), 8);
+        System.out.println("tecla presionada");
+        
+        
+        f.modificarClienteTable(dni, nombre, apellidos, fechaNacimiento, direccion, Integer.parseInt(codPostal), ciudad, Integer.parseInt(telefono), correo);
+        
+        this.tablaClientes.setModel(f.listarClientes());
+        
     }//GEN-LAST:event_tablaClientes2KeyReleased
 
     private void listaClientes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaClientes1MouseClicked
@@ -3827,6 +3871,21 @@ try{
         f.modificarTrabajador(txtAdminAdministradorNombre17.getText(), txtAdminAdministradorApellidos11.getText(), txtAdminAdministradorNombre16.getText(), txtAdminAdministradorApellidos10.getText(), txtAdminAdministradorDireccion6.getText(), Integer.parseInt(txtAdminAdministradorTelefono6.getText()), txtAdminAdministradorCorreo6.getText(), Integer.parseInt(txtAdminAdministradorCodPostal6.getText()));
     }//GEN-LAST:event_buttonAction21ActionPerformed
 
+    private void txtAdminAdministradorNombre8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorNombre8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdminAdministradorNombre8ActionPerformed
+
+    private void buttonAction28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction28ActionPerformed
+        String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha1.getDate());
+        f.modificarCliente(txtAdminAdministradorNombre9.getText(), txtAdminAdministradorApellidos8.getText(), txtAdminAdministradorNombre8.getText(), fecha, txtAdminAdministradorDireccion4.getText(), Integer.parseInt(txtAdminAdministradorCodPostal4.getText()), txtAdminAdministradorApellidos7.getText(), Integer.parseInt(txtAdminAdministradorTelefono4.getText()), txtAdminAdministradorCorreo4.getText());
+        this.tablaClientes2.setModel(f.listarClientes());
+    }//GEN-LAST:event_buttonAction28ActionPerformed
+
+    private void buttonAction39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction39ActionPerformed
+        String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha1.getDate());
+       // f.añadirCliente(txtAdminAdministradorNombre11.getText(), passwordField2.getText(), txtAdminAdministradorNombre10.getText(), fecha, txtAdminAdministradorDireccion5.getText(), Integer.parseInt(txtAdminAdministradorCodPostal5.getText()), txtAdminAdministradorTelefono7.getText(), Integer.parseInt(txtAdminAdministradorTelefono5.getText()), txtAdminAdministradorCorreo5.getText());
+    }//GEN-LAST:event_buttonAction39ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3917,7 +3976,7 @@ try{
     private org.edisoncor.gui.label.LabelTask dniTrabajador;
     private com.toedter.calendar.JDateChooser fecha;
     private com.toedter.calendar.JDateChooser fecha1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser fecha3;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
