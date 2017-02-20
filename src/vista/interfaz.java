@@ -30,6 +30,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableColumn;
+import modelo.comprobacion;
 import modelo.conexion;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -49,6 +50,7 @@ import org.edisoncor.gui.util.Avatar;
 public class interfaz extends javax.swing.JFrame implements DocumentListener{
     
     fachada f = new fachada();
+    comprobacion c = new comprobacion();
     
     //ComboBox tabla Clases
     JComboBox jcb  = new JComboBox(f.comboMonitores());
@@ -654,7 +656,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1140, 628));
 
-        panelPrincipal.setBackground(new java.awt.Color(255, 255, 51));
+        panelPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         panelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelLoguin.setBackground(new java.awt.Color(0, 0, 0));
@@ -1840,7 +1842,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         );
 
         labelTask4.setForeground(new java.awt.Color(255, 255, 255));
-        labelTask4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trabajador42.png"))); // NOI18N
+        labelTask4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/maquina42.png"))); // NOI18N
         labelTask4.setText("Clases");
         labelTask4.setDescription(" ");
 
@@ -3260,6 +3262,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
     private void buttonAction18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction18ActionPerformed
         //Admin guardar clase
+        if(!txtAdminClasesNombre.getText().isEmpty() && !txtAdminClasesPrecio.getText().isEmpty()){
+        if(c.comprobacion(txtAdminClasesPrecio.getText())){
         String dniMonitor = (String)this.cmbAdminClases.getSelectedItem();
         
         String dniM = dniMonitor.substring(0, 9);
@@ -3275,6 +3279,14 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         
         txtAdminClasesNombre.setText("");
         txtAdminClasesPrecio.setText("");
+        
+            JOptionPane.showMessageDialog(null, "Clase guardada");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos para el precio");
+        }
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellena todos los campos");
+        }
     }//GEN-LAST:event_buttonAction18ActionPerformed
 
     private void buttonAction16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction16ActionPerformed
@@ -3322,6 +3334,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
     private void buttonAction34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction34ActionPerformed
     //Boton admin maquinas guardar
+        if(!txtAdminMaquiNombre.getText().isEmpty()){    
         String idClaseProv = cmbAdminMaquinas.getSelectedItem().toString();
         List<String> l = Arrays.asList(idClaseProv.split(" "));
         
@@ -3332,6 +3345,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         this.tablaMaquinas.setModel(f.listarMaquinas());
         
         txtAdminMaquiNombre.setText("");
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellene todos los campos");
+        }
     }//GEN-LAST:event_buttonAction34ActionPerformed
 
     private void cmbAdminClasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbAdminClasesActionPerformed
@@ -3551,6 +3567,8 @@ try{
 
     private void buttonAction4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction4ActionPerformed
         //boton admin admin modificar
+        
+        if(c.comprobacion(txtAdminAdministradorTelefono.getText()) && c.comprobacion(txtAdminAdministradorCodPostal.getText())){
         f.modificarEmpleado(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
         this.listaAdmin.setModel(f.listAdmin());
        
@@ -3562,6 +3580,11 @@ try{
         txtAdminAdministradorCodPostal.setText("");
         txtAdminAdministradorTelefono.setText("");
         txtAdminAdministradorCorreo.setText("");
+        
+            JOptionPane.showMessageDialog(null, "Administrador modificado");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Teléfono");
+        }
     }//GEN-LAST:event_buttonAction4ActionPerformed
 
     private void buttonAction5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction5ActionPerformed
@@ -3581,21 +3604,30 @@ try{
 
     private void buttonAction3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction3ActionPerformed
         //boton admin admin guardar
-        f.añadirAdministrador(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), 1, txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
-        this.listaAdmin.setModel(f.listAdmin());
-       
-        txtAdminAdministradorDni.setText("");
-        txtAdminAdministradorNombre.setText("");
-        txtAdminAdministradorContraseña.setText("");
-        txtAdminAdministradorApellidos.setText("");
-        txtAdminAdministradorDireccion.setText("");
-        txtAdminAdministradorCodPostal.setText("");
-        txtAdminAdministradorTelefono.setText("");
-        txtAdminAdministradorCorreo.setText("");
+        
+        if(c.comprobacion(txtAdminAdministradorTelefono.getText())  && c.comprobacion(txtAdminAdministradorCodPostal.getText())){
+        
+            f.añadirAdministrador(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), 1, txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
+            this.listaAdmin.setModel(f.listAdmin());
+
+            txtAdminAdministradorDni.setText("");
+            txtAdminAdministradorNombre.setText("");
+            txtAdminAdministradorContraseña.setText("");
+            txtAdminAdministradorApellidos.setText("");
+            txtAdminAdministradorDireccion.setText("");
+            txtAdminAdministradorCodPostal.setText("");
+            txtAdminAdministradorTelefono.setText("");
+            txtAdminAdministradorCorreo.setText("");
+            
+            JOptionPane.showMessageDialog(null, "Administrador guardado");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Teléfono");
+        }
     }//GEN-LAST:event_buttonAction3ActionPerformed
 
     private void buttonAction6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction6ActionPerformed
         //boton admin cliente modificar
+        if(c.comprobacion(txtAdminClienteCP.getText())  && c.comprobacion(txtAdminClienteTelefono.getText())){
         String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha.getDate());
         f.modificarCliente(txtAdminClienteDni.getText(), txtAdminClienteNombre.getText(), txtAdminClienteApellidos.getText(), fecha, txtAdminClienteDireccion.getText(), Integer.parseInt(txtAdminClienteCP.getText()), txtAdminClienteCiudad.getText(), Integer.parseInt(txtAdminClienteTelefono.getText()), txtAdminClienteCorreo.getText());
         this.tablaClientes.setModel(f.listarClientes());
@@ -3609,10 +3641,15 @@ try{
         txtAdminClienteCorreo.setText("");
         txtAdminClienteCiudad.setText("");
         
+            JOptionPane.showMessageDialog(null, "Cliente modificado");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Telefono y codigo postal");
+        }
     }//GEN-LAST:event_buttonAction6ActionPerformed
 
     private void buttonAction14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction14ActionPerformed
         //boton admin trabajador guardar
+        if(c.comprobacion(txtAdminTrabajCP.getText())  && c.comprobacion(txtAdminTrabajTeled.getText())){
         f.añadirTrabajador(txtAdminTrabajDni.getText(), txtAdminTrabajContrsña.getText(), 0, txtAdminTrabajNombre.getText(), txtAdminTrabajApellid.getText(), txtAdminTrabajDireccion.getText(), Integer.parseInt(txtAdminTrabajTeled.getText()), txtAdminTrabajCorreo.getText(),Integer.parseInt(txtAdminTrabajCP.getText()));
         this.listaTrabajadores.setModel(f.listTrabajador());
         
@@ -3624,6 +3661,11 @@ try{
         txtAdminTrabajTeled.setText("");
         txtAdminTrabajCorreo.setText("");
         txtAdminTrabajContrsña.setText("");
+        
+            JOptionPane.showMessageDialog(null, "Trabajador guardado");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Telefono y codigo postal");
+        }
     }//GEN-LAST:event_buttonAction14ActionPerformed
 
     private void listaTrabajadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaTrabajadoresMouseClicked
@@ -3664,6 +3706,7 @@ try{
 
     private void buttonAction11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction11ActionPerformed
         //boton admin trabajador modificar
+        if(c.comprobacion(txtAdminTrabajCP.getText())  && c.comprobacion(txtAdminTrabajTeled.getText())){
         f.modificarTrabajador(txtAdminTrabajDni.getText(), txtAdminTrabajContrsña.getText(), txtAdminTrabajNombre.getText(), txtAdminTrabajApellid.getText(), txtAdminTrabajDireccion.getText(), Integer.parseInt(txtAdminTrabajTeled.getText()), txtAdminTrabajCorreo.getText(),Integer.parseInt(txtAdminTrabajCP.getText()));
         this.listaTrabajadores.setModel(f.listTrabajador());
         
@@ -3675,10 +3718,16 @@ try{
         txtAdminTrabajTeled.setText("");
         txtAdminTrabajCorreo.setText("");
         txtAdminTrabajContrsña.setText("");
+        
+            JOptionPane.showMessageDialog(null, "Trabajador modificado");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Telefono y codigo postal");
+        }
     }//GEN-LAST:event_buttonAction11ActionPerformed
 
     private void buttonAction15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction15ActionPerformed
-        
+        if(!txtAdminClasesNombre.getText().isEmpty() && !txtAdminClasesPrecio.getText().isEmpty()){
+        if(c.comprobacion(txtAdminClasesPrecio.getText())){
         String idClase=(String) tablaClases.getValueAt(tablaClases.getSelectedRow(), 0);
         
         String dniMonitor = (String)this.cmbAdminClases.getSelectedItem();
@@ -3690,9 +3739,16 @@ try{
         
         txtAdminClasesNombre.setText("");
         txtAdminClasesPrecio.setText("");
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo caracteres numericos para el precio");
+        }
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellena todos los campos");
+        }
     }//GEN-LAST:event_buttonAction15ActionPerformed
 
     private void buttonAction31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction31ActionPerformed
+        if(!txtAdminMaquiNombre.getText().isEmpty()){
         String idClaseProv = cmbAdminMaquinas.getSelectedItem().toString();
         List<String> l = Arrays.asList(idClaseProv.split(" "));
         int idClase = Integer.parseInt(l.get(0));
@@ -3702,6 +3758,9 @@ try{
         this.tablaMaquinas.setModel(f.listarMaquinas());
         
         txtAdminMaquiNombre.setText("");
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellene todos los campos");
+        }
     }//GEN-LAST:event_buttonAction31ActionPerformed
 
     private void buttonAction13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction13ActionPerformed
