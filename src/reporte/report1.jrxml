@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a09ed573-cec6-424a-913b-dd97f5a8da61">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -30,10 +33,6 @@ FROM
 	</background>
 	<title>
 		<band height="132" splitType="Stretch">
-			<image>
-				<reportElement x="456" y="0" width="99" height="132" uuid="1ea9bd69-44d2-4612-8929-7b16c25ccd34"/>
-				<imageExpression><![CDATA["cherry.jpg"]]></imageExpression>
-			</image>
 			<frame>
 				<reportElement mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000" uuid="181d228f-2b37-47ee-8a1c-2ce220b0c46f"/>
 				<staticText>
@@ -41,14 +40,14 @@ FROM
 					<textElement>
 						<font isBold="false"/>
 					</textElement>
-					<text><![CDATA[Cherry Title]]></text>
+					<text><![CDATA[Star GYM]]></text>
 				</staticText>
 				<staticText>
 					<reportElement style="SubTitle" x="157" y="66" width="249" height="29" uuid="113bb3a9-26ad-4e38-be92-680499345558"/>
 					<textElement>
 						<font size="22" isBold="false"/>
 					</textElement>
-					<text><![CDATA[Cherry SubTitle]]></text>
+					<text><![CDATA[Matricula]]></text>
 				</staticText>
 			</frame>
 			<frame>
@@ -61,6 +60,10 @@ FROM
 					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 				</textField>
 			</frame>
+			<image>
+				<reportElement x="470" y="13" width="98" height="82" uuid="a065f3ed-05b0-4046-a6ea-df8cebc7ecbb"/>
+				<imageExpression><![CDATA["C:\\Users\\Manuel\\Documents\\NetBeansProjects\\StarGym\\src\\imagenes\\logo.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -73,28 +76,21 @@ FROM
 				<textElement>
 					<font isBold="false"/>
 				</textElement>
-				<text><![CDATA[clase_nombre]]></text>
+				<text><![CDATA[Clase]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="138" y="7" width="138" height="18" forecolor="#000000" uuid="eac9d844-87e1-4b86-9655-a00d61e74a33"/>
 				<textElement>
 					<font isBold="false"/>
 				</textElement>
-				<text><![CDATA[clase_precio]]></text>
+				<text><![CDATA[Precio]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Column header" x="276" y="7" width="138" height="18" forecolor="#000000" uuid="d930c66a-4555-4458-9e75-9dec4f71f739"/>
+				<reportElement style="Column header" x="276" y="7" width="279" height="18" forecolor="#000000" uuid="d930c66a-4555-4458-9e75-9dec4f71f739"/>
 				<textElement>
 					<font isBold="false"/>
 				</textElement>
-				<text><![CDATA[monitores_nombre]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="414" y="7" width="138" height="18" forecolor="#000000" uuid="7e830750-000d-44b4-bccf-913adecbd1ba"/>
-				<textElement>
-					<font isBold="false"/>
-				</textElement>
-				<text><![CDATA[monitores_apellidos]]></text>
+				<text><![CDATA[Monitor]]></text>
 			</staticText>
 		</band>
 	</columnHeader>

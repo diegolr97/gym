@@ -65,7 +65,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         avatarAdmin.setVisible(false);
         panelAdmin.setVisible(false);
         panelAdminAdmin.setVisible(false);
-        panelAdminClase.setVisible(false);
         panelAdminCliente.setVisible(false);
         panelAdminMaquina.setVisible(false);
         panelAdminTrabajador.setVisible(false);
@@ -92,8 +91,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         avatarsAdmin.add(new Avatar("Admin", loadImage("/imagenes/admin.png")));
         avatarsAdmin.add(new Avatar("Clientes", loadImage("/imagenes/clients.png")));
         avatarsAdmin.add(new Avatar("Trabajadores", loadImage("/imagenes/trabajador.png")));
-        avatarsAdmin.add(new Avatar("Maquinas", loadImage("/imagenes/maquina.png")));
-        avatarsAdmin.add(new Avatar("Clases", loadImage("/imagenes/clase.png")));
+        avatarsAdmin.add(new Avatar("Clases", loadImage("/imagenes/maquina.png")));
         avatarsAdmin.add(new Avatar("Exit", loadImage("/imagenes/exit.png")));
         
         avatarAdmin.setAvatars(avatarsAdmin);
@@ -148,15 +146,15 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric35 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric36 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric37 = new org.edisoncor.gui.label.LabelMetric();
-        txtapellidosmonitor = new org.edisoncor.gui.textField.TextField();
-        txtdnimonitor = new org.edisoncor.gui.textField.TextField();
-        txttelefonomonitor = new org.edisoncor.gui.textField.TextField();
-        txtcorreomonitor = new org.edisoncor.gui.textField.TextField();
+        txtMonitorApellidos = new org.edisoncor.gui.textField.TextField();
+        txtMonitorDni = new org.edisoncor.gui.textField.TextField();
+        txtMonitorTelefono = new org.edisoncor.gui.textField.TextField();
+        txtMonitorCorreo = new org.edisoncor.gui.textField.TextField();
         labelMetric39 = new org.edisoncor.gui.label.LabelMetric();
         Guardar = new org.edisoncor.gui.button.ButtonAction();
         buttonAction22 = new org.edisoncor.gui.button.ButtonAction();
         labelMetric40 = new org.edisoncor.gui.label.LabelMetric();
-        txtnombremonitor = new org.edisoncor.gui.textField.TextField();
+        txtMonitorNombre = new org.edisoncor.gui.textField.TextField();
         jSpinner1 = new javax.swing.JSpinner();
         panelPrincipal = new javax.swing.JPanel();
         panelLoguin = new javax.swing.JPanel();
@@ -210,20 +208,20 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         buttonAction10 = new org.edisoncor.gui.button.ButtonAction();
         labelMetric17 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric18 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorTelefono1 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteTelefono = new org.edisoncor.gui.textField.TextField();
         labelMetric10 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorNombre2 = new org.edisoncor.gui.textField.TextField();
-        txtAdminAdministradorDireccion1 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteApellidos = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteDireccion = new org.edisoncor.gui.textField.TextField();
         labelMetric19 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorApellidos2 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteCiudad = new org.edisoncor.gui.textField.TextField();
         labelMetric11 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorCodPostal1 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteCP = new org.edisoncor.gui.textField.TextField();
         labelMetric20 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorCorreo1 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteCorreo = new org.edisoncor.gui.textField.TextField();
         labelMetric21 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorNombre3 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteDni = new org.edisoncor.gui.textField.TextField();
         labelMetric22 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorApellidos3 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClienteNombre = new org.edisoncor.gui.textField.TextField();
         labelMetric23 = new org.edisoncor.gui.label.LabelMetric();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
@@ -246,20 +244,20 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         buttonAction14 = new org.edisoncor.gui.button.ButtonAction();
         labelMetric25 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric26 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorTelefono2 = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajTeled = new org.edisoncor.gui.textField.TextField();
         labelMetric27 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorNombre4 = new org.edisoncor.gui.textField.TextField();
-        txtAdminAdministradorDireccion2 = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajNombre = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajDireccion = new org.edisoncor.gui.textField.TextField();
         labelMetric28 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorApellidos5 = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajApellid = new org.edisoncor.gui.textField.TextField();
         labelMetric29 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorCodPostal2 = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajCP = new org.edisoncor.gui.textField.TextField();
         labelMetric30 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorCorreo2 = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajCorreo = new org.edisoncor.gui.textField.TextField();
         labelMetric31 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorNombre5 = new org.edisoncor.gui.textField.TextField();
+        txtAdminTrabajDni = new org.edisoncor.gui.textField.TextField();
         labelMetric32 = new org.edisoncor.gui.label.LabelMetric();
-        passwordField1 = new org.edisoncor.gui.passwordField.PasswordField();
+        txtAdminTrabajContrsña = new org.edisoncor.gui.passwordField.PasswordField();
         labelTask3 = new org.edisoncor.gui.label.LabelTask();
         panelAdminMaquina = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
@@ -272,7 +270,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jScrollPane7 = new javax.swing.JScrollPane();
         tablaMaquinas = new javax.swing.JTable();
         labelMetric38 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminManquinaNombre = new org.edisoncor.gui.textField.TextField();
+        txtAdminMaquiNombre = new org.edisoncor.gui.textField.TextField();
         cmbAdminMaquinas = new org.edisoncor.gui.comboBox.ComboBoxRound();
         labelMetric46 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric47 = new org.edisoncor.gui.label.LabelMetric();
@@ -286,14 +284,13 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         buttonAction16 = new org.edisoncor.gui.button.ButtonAction();
         buttonAction17 = new org.edisoncor.gui.button.ButtonAction();
         buttonAction18 = new org.edisoncor.gui.button.ButtonAction();
-        txtAdminAdministradorNombre12 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClasesNombre = new org.edisoncor.gui.textField.TextField();
         labelMetric48 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric49 = new org.edisoncor.gui.label.LabelMetric();
-        txtAdminAdministradorNombre13 = new org.edisoncor.gui.textField.TextField();
+        txtAdminClasesPrecio = new org.edisoncor.gui.textField.TextField();
         labelMetric50 = new org.edisoncor.gui.label.LabelMetric();
         cmbAdminClases = new org.edisoncor.gui.comboBox.ComboBoxRound();
         labelTask4 = new org.edisoncor.gui.label.LabelTask();
-        panelAdminClase = new javax.swing.JPanel();
         btnAdminRetroceso = new org.edisoncor.gui.button.ButtonCircle();
         labelMetric3 = new org.edisoncor.gui.label.LabelMetric();
         lblAdministrador = new org.edisoncor.gui.label.LabelMetric();
@@ -586,24 +583,24 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
                                             .addComponent(labelMetric36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(txttelefonomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtMonitorTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(18, 18, 18)
                                             .addComponent(labelMetric37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtcorreomonitor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(txtMonitorCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel15Layout.createSequentialGroup()
                                             .addComponent(labelMetric35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtapellidosmonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(txtMonitorApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel15Layout.createSequentialGroup()
                                         .addGap(33, 33, 33)
                                         .addComponent(labelMetric34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(14, 14, 14)
-                                        .addComponent(txtdnimonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtMonitorDni, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(labelMetric40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(14, 14, 14)
-                                        .addComponent(txtnombremonitor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txtMonitorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addGap(141, 141, 141)
                                 .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -622,19 +619,19 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelMetric34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtdnimonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMonitorDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnombremonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMonitorNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelMetric35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtapellidosmonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMonitorApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelMetric37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtcorreomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txttelefonomonitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtMonitorCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtMonitorTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(labelMetric36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -730,7 +727,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         panelPrincipal.add(panelLoguin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, 1140, 660));
 
-        panelAdmin.setBackground(new java.awt.Color(0, 204, 204));
+        panelAdmin.setBackground(new java.awt.Color(0, 0, 0));
         panelAdmin.setPreferredSize(new java.awt.Dimension(1140, 628));
 
         avatarAdmin.setColorPrimario(new java.awt.Color(0, 0, 0));
@@ -1087,68 +1084,68 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric18.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, 26));
 
-        txtAdminAdministradorTelefono1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminAdministradorTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 180, 24));
+        txtAdminClienteTelefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel5.add(txtAdminClienteTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 180, 24));
 
         labelMetric10.setText("Apellidos:");
         labelMetric10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 97, -1));
 
-        txtAdminAdministradorNombre2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminAdministradorNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 255, 24));
+        txtAdminClienteApellidos.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel5.add(txtAdminClienteApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 255, 24));
 
-        txtAdminAdministradorDireccion1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txtAdminAdministradorDireccion1.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminClienteDireccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtAdminClienteDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminAdministradorDireccion1ActionPerformed(evt);
+                txtAdminClienteDireccionActionPerformed(evt);
             }
         });
-        jPanel5.add(txtAdminAdministradorDireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 300, 24));
+        jPanel5.add(txtAdminClienteDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 300, 24));
 
         labelMetric19.setText("Ciudad:");
         labelMetric19.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric19, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
-        txtAdminAdministradorApellidos2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminAdministradorApellidos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 190, 24));
+        txtAdminClienteCiudad.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel5.add(txtAdminClienteCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 190, 24));
 
         labelMetric11.setText("C.P.");
         labelMetric11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
 
-        txtAdminAdministradorCodPostal1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminAdministradorCodPostal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 61, 24));
+        txtAdminClienteCP.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel5.add(txtAdminClienteCP, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 61, 24));
 
         labelMetric20.setText("Correo:");
         labelMetric20.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric20, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, -1, -1));
 
-        txtAdminAdministradorCorreo1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminAdministradorCorreo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 174, 24));
+        txtAdminClienteCorreo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel5.add(txtAdminClienteCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 174, 24));
 
         labelMetric21.setText("Dni:");
         labelMetric21.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric21, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 42, -1));
 
-        txtAdminAdministradorNombre3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txtAdminAdministradorNombre3.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminClienteDni.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtAdminClienteDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminAdministradorNombre3ActionPerformed(evt);
+                txtAdminClienteDniActionPerformed(evt);
             }
         });
-        jPanel5.add(txtAdminAdministradorNombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 190, 24));
+        jPanel5.add(txtAdminClienteDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 190, 24));
 
         labelMetric22.setText("Nombre:");
         labelMetric22.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jPanel5.add(labelMetric22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 85, -1));
 
-        txtAdminAdministradorApellidos3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        txtAdminAdministradorApellidos3.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminClienteNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtAdminClienteNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminAdministradorApellidos3ActionPerformed(evt);
+                txtAdminClienteNombreActionPerformed(evt);
             }
         });
-        jPanel5.add(txtAdminAdministradorApellidos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 220, 24));
+        jPanel5.add(txtAdminClienteNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 220, 24));
 
         labelMetric23.setText("F. Nacimiento:");
         labelMetric23.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -1281,6 +1278,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
 
         buttonAction13.setText("Nuevo");
+        buttonAction13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction13ActionPerformed(evt);
+            }
+        });
 
         buttonAction14.setText("Guardar");
         buttonAction14.addActionListener(new java.awt.event.ActionListener() {
@@ -1326,44 +1328,44 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric26.setText("Telefono:");
         labelMetric26.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorTelefono2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajTeled.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric27.setText("Nombre:");
         labelMetric27.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorNombre4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        txtAdminAdministradorDireccion2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajDireccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric28.setText("Apellidos:");
         labelMetric28.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorApellidos5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajApellid.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric29.setText("Cod. Postal");
         labelMetric29.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorCodPostal2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajCP.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric30.setText("Correo:");
         labelMetric30.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorCorreo2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajCorreo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric31.setText("Dni:");
         labelMetric31.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorNombre5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        txtAdminAdministradorNombre5.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminTrabajDni.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        txtAdminTrabajDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminAdministradorNombre5ActionPerformed(evt);
+                txtAdminTrabajDniActionPerformed(evt);
             }
         });
 
         labelMetric32.setText("Contraseña:");
         labelMetric32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        passwordField1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminTrabajContrsña.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -1381,32 +1383,32 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(txtAdminAdministradorDireccion2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtAdminTrabajDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
                                 .addComponent(labelMetric29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtAdminAdministradorCodPostal2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtAdminTrabajCP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(txtAdminAdministradorTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtAdminTrabajTeled, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
                                 .addComponent(labelMetric30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtAdminAdministradorCorreo2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(txtAdminTrabajCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(txtAdminAdministradorNombre4, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
+                                .addComponent(txtAdminTrabajNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                                 .addGap(18, 18, 18)
                                 .addComponent(labelMetric28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtAdminAdministradorApellidos5, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtAdminTrabajApellid, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addComponent(labelMetric31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAdminAdministradorNombre5, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAdminTrabajDni, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(labelMetric32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(passwordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAdminTrabajContrsña, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addGap(17, 647, Short.MAX_VALUE)
@@ -1418,32 +1420,32 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(labelMetric24, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminTrabajContrsña, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelMetric32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtAdminAdministradorNombre5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAdminTrabajDni, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(labelMetric31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(labelMetric28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminAdministradorApellidos5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminTrabajApellid, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtAdminAdministradorNombre4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAdminTrabajNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(labelMetric27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAdminAdministradorCodPostal2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminTrabajCP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminAdministradorDireccion2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminTrabajDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelMetric26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminAdministradorTelefono2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminTrabajTeled, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminAdministradorCorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAdminTrabajCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(106, 106, 106)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1592,7 +1594,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric38.setText("MAQUINAS");
         labelMetric38.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
 
-        txtAdminManquinaNombre.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminMaquiNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric46.setText("Nombre:");
         labelMetric46.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -1615,7 +1617,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                         .addComponent(labelMetric46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAdminManquinaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAdminMaquiNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(labelMetric47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1631,7 +1633,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminManquinaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminMaquiNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbAdminMaquinas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1696,6 +1698,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
 
         buttonAction17.setText("Nuevo");
+        buttonAction17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAction17ActionPerformed(evt);
+            }
+        });
 
         buttonAction18.setText("Guardar");
         buttonAction18.addActionListener(new java.awt.event.ActionListener() {
@@ -1731,7 +1738,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        txtAdminAdministradorNombre12.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminClasesNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric48.setText("Nombre:");
         labelMetric48.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -1739,7 +1746,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric49.setText("Precio:");
         labelMetric49.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorNombre13.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminClasesPrecio.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric50.setText("Monitor:");
         labelMetric50.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -1770,7 +1777,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                                     .addComponent(labelMetric50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtAdminAdministradorNombre12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtAdminClasesNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(cmbAdminClases, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1778,7 +1785,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                                         .addGap(0, 60, Short.MAX_VALUE)
                                         .addComponent(labelMetric49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtAdminAdministradorNombre13, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtAdminClasesPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel12Layout.createSequentialGroup()
                                         .addComponent(buttonIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE)))))
@@ -1793,10 +1800,10 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtAdminAdministradorNombre12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminClasesNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMetric49, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminAdministradorNombre13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAdminClasesPrecio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -1834,7 +1841,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         labelTask4.setForeground(new java.awt.Color(255, 255, 255));
         labelTask4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/trabajador42.png"))); // NOI18N
-        labelTask4.setText("Trabajador");
+        labelTask4.setText("Clases");
         labelTask4.setDescription(" ");
 
         javax.swing.GroupLayout panelAdminMaquinaLayout = new javax.swing.GroupLayout(panelAdminMaquina);
@@ -1858,19 +1865,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-        );
-
-        panelAdminClase.setBackground(new java.awt.Color(153, 255, 204));
-
-        javax.swing.GroupLayout panelAdminClaseLayout = new javax.swing.GroupLayout(panelAdminClase);
-        panelAdminClase.setLayout(panelAdminClaseLayout);
-        panelAdminClaseLayout.setHorizontalGroup(
-            panelAdminClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        panelAdminClaseLayout.setVerticalGroup(
-            panelAdminClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         btnAdminRetroceso.setText("buttonCircle1");
@@ -1900,7 +1894,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelAdminCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelAdminAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelAdminClase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(avatarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 1140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelAdminTrabajador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelAdminMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1921,7 +1914,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addGroup(panelAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelAdminCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelAdminAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelAdminClase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelAdminLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
                         .addComponent(avatarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1931,7 +1923,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         panelPrincipal.add(panelAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 660));
 
-        panelTrab.setBackground(new java.awt.Color(0, 204, 204));
+        panelTrab.setBackground(new java.awt.Color(0, 0, 0));
         panelTrab.setPreferredSize(new java.awt.Dimension(1140, 628));
         panelTrab.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -2929,12 +2921,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     private void btnLoguinEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoguinEntrarActionPerformed
         //Boton loguin entrar        
 
-//        if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==1){
+        if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==1){
             panelLoguin.setVisible(false);
             avatarAdmin.setVisible(true);
             panelAdmin.setVisible(true);
             panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(false);
@@ -2949,29 +2941,28 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             //Colocar en el label superior izquierdo el identificador
             lblAdministrador.setText(txtLoguinUsuario.getText());
             
-//        }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
-//            panelLoguin.setVisible(false);
-//            avatarTrab.setVisible(true);
-//            panelTrab.setVisible(true);
-//            panelTrabPerfil.setVisible(false);
-//            panelTrabCliente.setVisible(false);
-//            panelTrabMatricula.setVisible(false);
-//            panelTrabCobro.setVisible(false);
-//            
-//            panelLoguin.setVisible(false);
-//            avatarAdmin.setVisible(false);
-//            panelAdmin.setVisible(false);
-//            panelAdminAdmin.setVisible(false);
-//            panelAdminClase.setVisible(false);
-//            panelAdminCliente.setVisible(false);
-//            panelAdminMaquina.setVisible(false);
-//            panelAdminTrabajador.setVisible(false);
-//            
-//            //Colocar en el label superior izquierdo el identificador
-//            lblTrabajador.setText(txtLoguinUsuario.getText());  
-//        }else{
-//           JOptionPane.showMessageDialog(null, "Datos incorrectos");
-//        }
+        }else if(f.iniciarSesion(this.txtLoguinUsuario.getText(), this.txtLoguinContraseña.getText())==0){
+            panelLoguin.setVisible(false);
+            avatarTrab.setVisible(true);
+            panelTrab.setVisible(true);
+            panelTrabPerfil.setVisible(false);
+            panelTrabCliente.setVisible(false);
+            panelTrabMatricula.setVisible(false);
+            panelTrabCobro.setVisible(false);
+            
+            panelLoguin.setVisible(false);
+            avatarAdmin.setVisible(false);
+            panelAdmin.setVisible(false);
+            panelAdminAdmin.setVisible(false);
+            panelAdminCliente.setVisible(false);
+            panelAdminMaquina.setVisible(false);
+            panelAdminTrabajador.setVisible(false);
+            
+            //Colocar en el label superior izquierdo el identificador
+            lblTrabajador.setText(txtLoguinUsuario.getText());  
+        }else{
+           JOptionPane.showMessageDialog(null, "Datos incorrectos");
+        }
     }//GEN-LAST:event_btnLoguinEntrarActionPerformed
 
     private void btnAdminIpodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminIpodActionPerformed
@@ -2981,11 +2972,20 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             avatarAdmin.setVisible(false);
             panelAdmin.setVisible(true);
             panelAdminAdmin.setVisible(true);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(false);
             this.listaAdmin.setModel(f.listAdmin());
+            
+            txtAdminAdministradorDni.setText("");
+            txtAdminAdministradorNombre.setText("");
+            txtAdminAdministradorContraseña.setText("");
+            txtAdminAdministradorApellidos.setText("");
+            txtAdminAdministradorDireccion.setText("");
+            txtAdminAdministradorCodPostal.setText("");
+            txtAdminAdministradorTelefono.setText("");
+            txtAdminAdministradorCorreo.setText("");
         }
         
         if(avatarAdmin.getSelectedtitulo().equals("Clientes")){
@@ -2993,10 +2993,19 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             avatarAdmin.setVisible(false);
             panelAdmin.setVisible(true);
             panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(true);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(false);
+            
+            txtAdminClienteDni.setText("");
+            txtAdminClienteNombre.setText("");
+            txtAdminClienteApellidos.setText("");
+            txtAdminClienteDireccion.setText("");
+            txtAdminClienteCP.setText("");
+            txtAdminClienteTelefono.setText("");
+            txtAdminClienteCorreo.setText("");
+            txtAdminClienteCiudad.setText("");
             
             this.tablaClientes.setModel(f.listarClientes());
             
@@ -3007,19 +3016,28 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             avatarAdmin.setVisible(false);
             panelAdmin.setVisible(true);
             panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(true);
             this.listaTrabajadores.setModel(f.listTrabajador());
+            
+            txtAdminTrabajDni.setText("");
+            txtAdminTrabajNombre.setText("");
+            txtAdminTrabajApellid.setText("");
+            txtAdminTrabajDireccion.setText("");
+            txtAdminTrabajCP.setText("");
+            txtAdminTrabajTeled.setText("");
+            txtAdminTrabajCorreo.setText("");
+            txtAdminTrabajContrsña.setText("");
         }
         
-        if(avatarAdmin.getSelectedtitulo().equals("Maquinas")){
+        if(avatarAdmin.getSelectedtitulo().equals("Clases")){
             panelLoguin.setVisible(false);
             avatarAdmin.setVisible(false);
             panelAdmin.setVisible(true);
             panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(true);
             panelAdminTrabajador.setVisible(false);
@@ -3034,20 +3052,14 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             this.tablaMaquinas.setModel(f.listarMaquinas());
             this.cmbAdminClases.setModel(f.comboMonitores());
             this.cmbAdminMaquinas.setModel(f.comboClases());
-        }
-        
-        if(avatarAdmin.getSelectedtitulo().equals("Clases")){
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(true);
-            panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(true);
-            panelAdminCliente.setVisible(false);
-            panelAdminMaquina.setVisible(false);
-            panelAdminTrabajador.setVisible(false);
             
+            txtAdminClasesNombre.setText("");
+            txtAdminClasesPrecio.setText("");
+            
+            txtAdminMaquiNombre.setText("");
         }
         
+                
         if(avatarAdmin.getSelectedtitulo().equals("Exit")){
             txtLoguinUsuario.setText("");
             txtLoguinContraseña.setText("");
@@ -3056,7 +3068,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             avatarAdmin.setVisible(false);
             panelAdmin.setVisible(false);
             panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(false);
@@ -3069,84 +3081,13 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         avatarAdmin.setVisible(true);
         panelAdmin.setVisible(true);
         panelAdminAdmin.setVisible(false);
-        panelAdminClase.setVisible(false);
+        
         panelAdminCliente.setVisible(false);
         panelAdminMaquina.setVisible(false);
         panelAdminTrabajador.setVisible(false);
     }//GEN-LAST:event_btnAdminRetrocesoActionPerformed
 
     private void avatarAdminKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_avatarAdminKeyPressed
-        //KEY PRESSED AVATARCHOOSER
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            if(avatarAdmin.getSelectedtitulo().equals("Admin")){
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(true);
-            panelAdminAdmin.setVisible(true);
-            panelAdminClase.setVisible(false);
-            panelAdminCliente.setVisible(false);
-            panelAdminMaquina.setVisible(false);
-            panelAdminTrabajador.setVisible(false);
-        }
-        
-        if(avatarAdmin.getSelectedtitulo().equals("Clientes")){
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(true);
-            panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
-            panelAdminCliente.setVisible(true);
-            panelAdminMaquina.setVisible(false);
-            panelAdminTrabajador.setVisible(false);
-        }
-        
-        if(avatarAdmin.getSelectedtitulo().equals("Trabajadores")){
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(true);
-            panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
-            panelAdminCliente.setVisible(false);
-            panelAdminMaquina.setVisible(false);
-            panelAdminTrabajador.setVisible(true);
-        }
-        
-        if(avatarAdmin.getSelectedtitulo().equals("Maquinas")){
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(true);
-            panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
-            panelAdminCliente.setVisible(false);
-            panelAdminMaquina.setVisible(true);
-            panelAdminTrabajador.setVisible(false);
-        }
-        
-        if(avatarAdmin.getSelectedtitulo().equals("Clases")){
-            panelLoguin.setVisible(false);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(true);
-            panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(true);
-            panelAdminCliente.setVisible(false);
-            panelAdminMaquina.setVisible(false);
-            panelAdminTrabajador.setVisible(false);
-        }
-        
-        if(avatarAdmin.getSelectedtitulo().equals("Exit")){
-            txtLoguinUsuario.setText("");
-            txtLoguinContraseña.setText("");
-            
-            panelLoguin.setVisible(true);
-            avatarAdmin.setVisible(false);
-            panelAdmin.setVisible(false);
-            panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
-            panelAdminCliente.setVisible(false);
-            panelAdminMaquina.setVisible(false);
-            panelAdminTrabajador.setVisible(false);
-        }
-        }
         
     }//GEN-LAST:event_avatarAdminKeyPressed
 
@@ -3155,46 +3096,57 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         
     }//GEN-LAST:event_listaClientesMouseClicked
 
-    private void txtAdminAdministradorApellidos3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorApellidos3ActionPerformed
+    private void txtAdminClienteNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminClienteNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAdminAdministradorApellidos3ActionPerformed
+    }//GEN-LAST:event_txtAdminClienteNombreActionPerformed
 
-    private void txtAdminAdministradorNombre3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorNombre3ActionPerformed
+    private void txtAdminClienteDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminClienteDniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAdminAdministradorNombre3ActionPerformed
+    }//GEN-LAST:event_txtAdminClienteDniActionPerformed
 
     private void tablaClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClientesMouseClicked
         //admin tabla clientes
-        this.txtAdminAdministradorNombre3.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 0));
-        this.txtAdminAdministradorApellidos3.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 1));
-        this.txtAdminAdministradorNombre2.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 2));
-        this.txtAdminAdministradorDireccion1.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 3));
-        this.txtAdminAdministradorApellidos2.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 4));
-        this.txtAdminAdministradorCodPostal1.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 5));
-        this.txtAdminAdministradorTelefono1.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 6));
+        this.txtAdminClienteDni.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 0));
+        this.txtAdminClienteNombre.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 1));
+        this.txtAdminClienteApellidos.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 2));
+        this.txtAdminClienteDireccion.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 3));
+        this.txtAdminClienteCiudad.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 4));
+        this.txtAdminClienteCP.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 5));
+        this.txtAdminClienteTelefono.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 6));
        // this.txtAdminAdministradorApellidos4.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 7));
-        this.txtAdminAdministradorCorreo1.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 8));
+        this.txtAdminClienteCorreo.setText((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 8));
         
         this.listaClientes.setModel(f.listClases((String) this.tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 0)));
     }//GEN-LAST:event_tablaClientesMouseClicked
 
-    private void txtAdminAdministradorDireccion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorDireccion1ActionPerformed
+    private void txtAdminClienteDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminClienteDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAdminAdministradorDireccion1ActionPerformed
+    }//GEN-LAST:event_txtAdminClienteDireccionActionPerformed
 
     private void buttonAction7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction7ActionPerformed
+        //boton admin cliente eliminar
         if (tablaClientes.getSelectedRow() > -1) {
-            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?")==0){
+            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?, se eliminaran las matriculas correspondientes")==0){
                 f.eliminarCliente((String) tablaClientes.getValueAt(tablaClientes.getSelectedRow(), 0));
                 this.tablaClientes.setModel(f.listarClientes());
                 this.listaClientes.setModel(f.listClases(dniCliente));
                    // textField.getDocument().addDocumentListener(new documentListener());
+                   
+            txtAdminClienteDni.setText("");
+            txtAdminClienteNombre.setText("");
+            txtAdminClienteApellidos.setText("");
+            txtAdminClienteDireccion.setText("");
+            txtAdminClienteCP.setText("");
+            txtAdminClienteTelefono.setText("");
+            txtAdminClienteCorreo.setText("");
+            txtAdminClienteCiudad.setText("");
 
             }
-            
+     
         } else {
             JOptionPane.showMessageDialog(this, "Seleccione una fila");
         }
+        
     }//GEN-LAST:event_buttonAction7ActionPerformed
 
     private void listaAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaAdminMouseClicked
@@ -3255,9 +3207,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         }
     }//GEN-LAST:event_tablaClientesKeyPressed
 
-    private void txtAdminAdministradorNombre5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorNombre5ActionPerformed
+    private void txtAdminTrabajDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminTrabajDniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAdminAdministradorNombre5ActionPerformed
+    }//GEN-LAST:event_txtAdminTrabajDniActionPerformed
 
     private void buttonAction10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction10ActionPerformed
         //Admin Cliente boton para añadir o quitar clases de la matricula
@@ -3272,6 +3224,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         diaAdminMaquinaMonitor.setSize(537, 430);
         diaAdminMaquinaMonitor.setVisible(true);
         this.tbMonitores.setModel(f.listarMonitores());
+        
+        txtMonitorDni.setText("");
+        txtMonitorNombre.setText("");
+        txtMonitorApellidos.setText("");
+        txtMonitorTelefono.setText("");
+        txtMonitorCorreo.setText("");
     }//GEN-LAST:event_buttonIcon1ActionPerformed
 
     private void buttonAction22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction22ActionPerformed
@@ -3281,11 +3239,11 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_buttonAction22ActionPerformed
 
     private void tbMonitoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbMonitoresMouseClicked
-        this.txtdnimonitor.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 0));
-        this.txtnombremonitor.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 1));
-        this.txtapellidosmonitor.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 2));
-        this.txttelefonomonitor.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 3));
-        this.txtcorreomonitor.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 4));
+        this.txtMonitorDni.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 0));
+        this.txtMonitorNombre.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 1));
+        this.txtMonitorApellidos.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 2));
+        this.txtMonitorTelefono.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 3));
+        this.txtMonitorCorreo.setText((String) this.tbMonitores.getValueAt(tbMonitores.getSelectedRow(), 4));
         
     }//GEN-LAST:event_tbMonitoresMouseClicked
 
@@ -3306,7 +3264,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         
         String dniM = dniMonitor.substring(0, 9);
         System.out.println("El dni del monitor es: " + dniM);
-        f.añadirClase(this.txtAdminAdministradorNombre12.getText(), Double.parseDouble(this.txtAdminAdministradorNombre13.getText()), dniM);
+        f.añadirClase(this.txtAdminClasesNombre.getText(), Double.parseDouble(this.txtAdminClasesPrecio.getText()), dniM);
         
         this.tablaClases.setModel(f.listarClases());
 //        TableColumn tc = tablaClases.getColumnModel().getColumn(3);
@@ -3314,13 +3272,20 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 //        tc.setCellEditor(tce);
         
         this.cmbAdminMaquinas.setModel(f.comboClases());
+        
+        txtAdminClasesNombre.setText("");
+        txtAdminClasesPrecio.setText("");
     }//GEN-LAST:event_buttonAction18ActionPerformed
 
     private void buttonAction16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction16ActionPerformed
+        //boton admin clase eliminar
         String id;
         id= String.valueOf( this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 0)); 
         f.eliminarClase(Integer.parseInt(id));
         this.tablaClases.setModel(f.listarClases());
+        
+        txtAdminClasesNombre.setText("");
+        txtAdminClasesPrecio.setText("");
     }//GEN-LAST:event_buttonAction16ActionPerformed
 
     private void tablaClasesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClasesKeyReleased
@@ -3349,8 +3314,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_tablaClasesKeyReleased
 
     private void tablaClasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaClasesMouseClicked
-        this.txtAdminAdministradorNombre12.setText((String) this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 1));
-        this.txtAdminAdministradorNombre13.setText((String) this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 2));
+        this.txtAdminClasesNombre.setText((String) this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 1));
+        this.txtAdminClasesPrecio.setText((String) this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 2));
         
         
     }//GEN-LAST:event_tablaClasesMouseClicked
@@ -3363,8 +3328,10 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         int idClase = Integer.parseInt(l.get(0));
         System.out.println("la Id es: " + idClase);
         
-        f.añadirMaquina(idClase, this.txtAdminManquinaNombre.getText());
+        f.añadirMaquina(idClase, this.txtAdminMaquiNombre.getText());
         this.tablaMaquinas.setModel(f.listarMaquinas());
+        
+        txtAdminMaquiNombre.setText("");
     }//GEN-LAST:event_buttonAction34ActionPerformed
 
     private void cmbAdminClasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbAdminClasesActionPerformed
@@ -3372,9 +3339,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
     }//GEN-LAST:event_cmbAdminClasesActionPerformed
 
     private void buttonAction32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction32ActionPerformed
+        //boton admin clase eliminar maquina
         String idMaquina= (String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
         f.eliminarMaquina(Integer.parseInt(idMaquina));
         this.tablaMaquinas.setModel(f.listarMaquinas());
+        
+        txtAdminMaquiNombre.setText("");
     }//GEN-LAST:event_buttonAction32ActionPerformed
 
     private void buttonAction9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction9ActionPerformed
@@ -3395,7 +3365,7 @@ try{
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
         //Boton dialog monitores guardar
-        f.añadirMonitor(this.txtdnimonitor.getText(), this.txtnombremonitor.getText(), this.txtapellidosmonitor.getText(), Integer.parseInt(this.txttelefonomonitor.getText()), this.txtcorreomonitor.getText());
+        f.añadirMonitor(this.txtMonitorDni.getText(), this.txtMonitorNombre.getText(), this.txtMonitorApellidos.getText(), Integer.parseInt(this.txtMonitorTelefono.getText()), this.txtMonitorCorreo.getText());
         this.tbMonitores.setModel(f.listarMonitores());
     }//GEN-LAST:event_GuardarActionPerformed
 
@@ -3405,12 +3375,12 @@ try{
 
     private void tablaMaquinasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMaquinasMouseClicked
         //admin tabla maquinas
-        this.txtAdminManquinaNombre.setText((String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 1));
+        this.txtAdminMaquiNombre.setText((String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 1));
     }//GEN-LAST:event_tablaMaquinasMouseClicked
 
     private void buttonAction33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction33ActionPerformed
         //boton admin maquina nuevo
-        txtAdminManquinaNombre.setText("");
+        txtAdminMaquiNombre.setText("");
     }//GEN-LAST:event_buttonAction33ActionPerformed
 
     private void btnTrabIpodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabIpodActionPerformed
@@ -3552,7 +3522,7 @@ try{
             avatarAdmin.setVisible(false);
             panelAdmin.setVisible(false);
             panelAdminAdmin.setVisible(false);
-            panelAdminClase.setVisible(false);
+            
             panelAdminCliente.setVisible(false);
             panelAdminMaquina.setVisible(false);
             panelAdminTrabajador.setVisible(false);
@@ -3580,29 +3550,80 @@ try{
     }//GEN-LAST:event_tablaTrabCobroMensualKeyReleased
 
     private void buttonAction4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction4ActionPerformed
-       f.modificarEmpleado(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
-       this.listaAdmin.setModel(f.listAdmin());
+        //boton admin admin modificar
+        f.modificarEmpleado(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
+        this.listaAdmin.setModel(f.listAdmin());
+       
+        txtAdminAdministradorDni.setText("");
+        txtAdminAdministradorNombre.setText("");
+        txtAdminAdministradorContraseña.setText("");
+        txtAdminAdministradorApellidos.setText("");
+        txtAdminAdministradorDireccion.setText("");
+        txtAdminAdministradorCodPostal.setText("");
+        txtAdminAdministradorTelefono.setText("");
+        txtAdminAdministradorCorreo.setText("");
     }//GEN-LAST:event_buttonAction4ActionPerformed
 
     private void buttonAction5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction5ActionPerformed
+        //Boton admin admin eliminar
         f.eliminarEmpleado(txtAdminAdministradorDni.getText());
         this.listaAdmin.setModel(f.listAdmin());
+        
+        txtAdminAdministradorDni.setText("");
+        txtAdminAdministradorNombre.setText("");
+        txtAdminAdministradorContraseña.setText("");
+        txtAdminAdministradorApellidos.setText("");
+        txtAdminAdministradorDireccion.setText("");
+        txtAdminAdministradorCodPostal.setText("");
+        txtAdminAdministradorTelefono.setText("");
+        txtAdminAdministradorCorreo.setText("");
     }//GEN-LAST:event_buttonAction5ActionPerformed
 
     private void buttonAction3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction3ActionPerformed
-       f.añadirAdministrador(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), 1, txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
-       this.listaAdmin.setModel(f.listAdmin());
+        //boton admin admin guardar
+        f.añadirAdministrador(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), 1, txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
+        this.listaAdmin.setModel(f.listAdmin());
+       
+        txtAdminAdministradorDni.setText("");
+        txtAdminAdministradorNombre.setText("");
+        txtAdminAdministradorContraseña.setText("");
+        txtAdminAdministradorApellidos.setText("");
+        txtAdminAdministradorDireccion.setText("");
+        txtAdminAdministradorCodPostal.setText("");
+        txtAdminAdministradorTelefono.setText("");
+        txtAdminAdministradorCorreo.setText("");
     }//GEN-LAST:event_buttonAction3ActionPerformed
 
     private void buttonAction6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction6ActionPerformed
+        //boton admin cliente modificar
         String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha.getDate());
-       f.modificarCliente(txtAdminAdministradorNombre3.getText(), txtAdminAdministradorApellidos3.getText(), txtAdminAdministradorNombre2.getText(), fecha, txtAdminAdministradorDireccion1.getText(), Integer.parseInt(txtAdminAdministradorCodPostal1.getText()), txtAdminAdministradorApellidos2.getText(), Integer.parseInt(txtAdminAdministradorTelefono1.getText()), txtAdminAdministradorCorreo1.getText());
-       this.tablaClientes.setModel(f.listarClientes());
+        f.modificarCliente(txtAdminClienteDni.getText(), txtAdminClienteNombre.getText(), txtAdminClienteApellidos.getText(), fecha, txtAdminClienteDireccion.getText(), Integer.parseInt(txtAdminClienteCP.getText()), txtAdminClienteCiudad.getText(), Integer.parseInt(txtAdminClienteTelefono.getText()), txtAdminClienteCorreo.getText());
+        this.tablaClientes.setModel(f.listarClientes());
+        
+        txtAdminClienteDni.setText("");
+        txtAdminClienteNombre.setText("");
+        txtAdminClienteApellidos.setText("");
+        txtAdminClienteDireccion.setText("");
+        txtAdminClienteCP.setText("");
+        txtAdminClienteTelefono.setText("");
+        txtAdminClienteCorreo.setText("");
+        txtAdminClienteCiudad.setText("");
+        
     }//GEN-LAST:event_buttonAction6ActionPerformed
 
     private void buttonAction14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction14ActionPerformed
-        f.añadirTrabajador(txtAdminAdministradorNombre5.getText(), passwordField1.getText(), 0, txtAdminAdministradorNombre4.getText(), txtAdminAdministradorApellidos5.getText(), txtAdminAdministradorDireccion2.getText(), Integer.parseInt(txtAdminAdministradorTelefono2.getText()), txtAdminAdministradorCorreo2.getText(),Integer.parseInt(txtAdminAdministradorCodPostal2.getText()));
+        //boton admin trabajador guardar
+        f.añadirTrabajador(txtAdminTrabajDni.getText(), txtAdminTrabajContrsña.getText(), 0, txtAdminTrabajNombre.getText(), txtAdminTrabajApellid.getText(), txtAdminTrabajDireccion.getText(), Integer.parseInt(txtAdminTrabajTeled.getText()), txtAdminTrabajCorreo.getText(),Integer.parseInt(txtAdminTrabajCP.getText()));
         this.listaTrabajadores.setModel(f.listTrabajador());
+        
+        txtAdminTrabajDni.setText("");
+        txtAdminTrabajNombre.setText("");
+        txtAdminTrabajApellid.setText("");
+        txtAdminTrabajDireccion.setText("");
+        txtAdminTrabajCP.setText("");
+        txtAdminTrabajTeled.setText("");
+        txtAdminTrabajCorreo.setText("");
+        txtAdminTrabajContrsña.setText("");
     }//GEN-LAST:event_buttonAction14ActionPerformed
 
     private void listaTrabajadoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaTrabajadoresMouseClicked
@@ -3615,25 +3636,45 @@ try{
         
         System.out.println("La id del admin es: " + idTra);
         
-        this.txtAdminAdministradorNombre5.setText(t.getIdEmpleado());
-        this.txtAdminAdministradorNombre4.setText(t.getNombre());
-        this.txtAdminAdministradorDireccion2.setText(t.getDireccion());
-        this.txtAdminAdministradorTelefono2.setText(String.valueOf(t.getTelefono()));
+        this.txtAdminTrabajDni.setText(t.getIdEmpleado());
+        this.txtAdminTrabajNombre.setText(t.getNombre());
+        this.txtAdminTrabajDireccion.setText(t.getDireccion());
+        this.txtAdminTrabajTeled.setText(String.valueOf(t.getTelefono()));
         
-        this.passwordField1.setText(t.getClave());
-        this.txtAdminAdministradorApellidos5.setText(t.getApellidos());
-        this.txtAdminAdministradorCodPostal2.setText(String.valueOf(t.getCodPostal()));
-        this.txtAdminAdministradorCorreo2.setText(t.getCorreo());       
+        this.txtAdminTrabajContrsña.setText(t.getClave());
+        this.txtAdminTrabajApellid.setText(t.getApellidos());
+        this.txtAdminTrabajCP.setText(String.valueOf(t.getCodPostal()));
+        this.txtAdminTrabajCorreo.setText(t.getCorreo());       
     }//GEN-LAST:event_listaTrabajadoresMouseClicked
 
     private void buttonAction12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction12ActionPerformed
-        f.eliminarTrabajador(txtAdminAdministradorNombre5.getText());
+        //boton admin trabajador eliminar
+        f.eliminarTrabajador(txtAdminTrabajDni.getText());
         this.listaTrabajadores.setModel(f.listTrabajador());
+        
+        txtAdminTrabajDni.setText("");
+        txtAdminTrabajNombre.setText("");
+        txtAdminTrabajApellid.setText("");
+        txtAdminTrabajDireccion.setText("");
+        txtAdminTrabajCP.setText("");
+        txtAdminTrabajTeled.setText("");
+        txtAdminTrabajCorreo.setText("");
+        txtAdminTrabajContrsña.setText("");
     }//GEN-LAST:event_buttonAction12ActionPerformed
 
     private void buttonAction11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction11ActionPerformed
-        f.modificarTrabajador(txtAdminAdministradorNombre5.getText(), passwordField1.getText(), txtAdminAdministradorNombre4.getText(), txtAdminAdministradorApellidos5.getText(), txtAdminAdministradorDireccion2.getText(), Integer.parseInt(txtAdminAdministradorTelefono2.getText()), txtAdminAdministradorCorreo2.getText(),Integer.parseInt(txtAdminAdministradorCodPostal2.getText()));
+        //boton admin trabajador modificar
+        f.modificarTrabajador(txtAdminTrabajDni.getText(), txtAdminTrabajContrsña.getText(), txtAdminTrabajNombre.getText(), txtAdminTrabajApellid.getText(), txtAdminTrabajDireccion.getText(), Integer.parseInt(txtAdminTrabajTeled.getText()), txtAdminTrabajCorreo.getText(),Integer.parseInt(txtAdminTrabajCP.getText()));
         this.listaTrabajadores.setModel(f.listTrabajador());
+        
+        txtAdminTrabajDni.setText("");
+        txtAdminTrabajNombre.setText("");
+        txtAdminTrabajApellid.setText("");
+        txtAdminTrabajDireccion.setText("");
+        txtAdminTrabajCP.setText("");
+        txtAdminTrabajTeled.setText("");
+        txtAdminTrabajCorreo.setText("");
+        txtAdminTrabajContrsña.setText("");
     }//GEN-LAST:event_buttonAction11ActionPerformed
 
     private void buttonAction15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction15ActionPerformed
@@ -3643,9 +3684,12 @@ try{
         String dniMonitor = (String)this.cmbAdminClases.getSelectedItem();
         String dniM = dniMonitor.substring(0, 9);
         System.out.println("El dni del monitor es: " + dniM);
-        f.modificarClase(Integer.parseInt(idClase), txtAdminAdministradorNombre12.getText(),  Double.parseDouble(txtAdminAdministradorNombre13.getText()), dniM);
+        f.modificarClase(Integer.parseInt(idClase), txtAdminClasesNombre.getText(),  Double.parseDouble(txtAdminClasesPrecio.getText()), dniM);
         this.tablaClases.setModel(f.listarClases());
         this.cmbAdminMaquinas.setModel(f.comboClases());
+        
+        txtAdminClasesNombre.setText("");
+        txtAdminClasesPrecio.setText("");
     }//GEN-LAST:event_buttonAction15ActionPerformed
 
     private void buttonAction31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction31ActionPerformed
@@ -3654,9 +3698,29 @@ try{
         int idClase = Integer.parseInt(l.get(0));
         System.out.println("la Id es: " + idClase);
         String idMaquina=(String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
-        f.modificarMaquina(Integer.parseInt(idMaquina), idClase , txtAdminManquinaNombre.getText());
+        f.modificarMaquina(Integer.parseInt(idMaquina), idClase , txtAdminMaquiNombre.getText());
         this.tablaMaquinas.setModel(f.listarMaquinas());
+        
+        txtAdminMaquiNombre.setText("");
     }//GEN-LAST:event_buttonAction31ActionPerformed
+
+    private void buttonAction13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction13ActionPerformed
+        //boton admin trabajador nuevo
+        txtAdminTrabajDni.setText("");
+        txtAdminTrabajNombre.setText("");
+        txtAdminTrabajApellid.setText("");
+        txtAdminTrabajDireccion.setText("");
+        txtAdminTrabajCP.setText("");
+        txtAdminTrabajTeled.setText("");
+        txtAdminTrabajCorreo.setText("");
+        txtAdminTrabajContrsña.setText("");
+    }//GEN-LAST:event_buttonAction13ActionPerformed
+
+    private void buttonAction17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction17ActionPerformed
+        //boton admin clase nuevo
+        txtAdminClasesNombre.setText("");
+        txtAdminClasesPrecio.setText("");
+    }//GEN-LAST:event_buttonAction17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3908,7 +3972,6 @@ try{
     private javax.swing.JList<String> listaTrabajadores;
     private javax.swing.JPanel panelAdmin;
     private javax.swing.JPanel panelAdminAdmin;
-    private javax.swing.JPanel panelAdminClase;
     private javax.swing.JPanel panelAdminCliente;
     private javax.swing.JPanel panelAdminMaquina;
     private javax.swing.JPanel panelAdminTrabajador;
@@ -3919,7 +3982,6 @@ try{
     private javax.swing.JPanel panelTrabCobro;
     private javax.swing.JPanel panelTrabMatricula;
     private javax.swing.JPanel panelTrabPerfil;
-    private org.edisoncor.gui.passwordField.PasswordField passwordField1;
     private org.edisoncor.gui.passwordField.PasswordField passwordField2;
     private org.edisoncor.gui.tabbedPane.TabbedPaneTask tabbedPaneTask1;
     private javax.swing.JTable tablaClases;
@@ -3932,27 +3994,18 @@ try{
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos10;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos11;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos2;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos3;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos5;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos7;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorApellidos8;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCodPostal;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorCodPostal1;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorCodPostal2;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCodPostal4;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCodPostal5;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCodPostal6;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorContraseña;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCorreo;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorCorreo1;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorCorreo2;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCorreo4;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCorreo5;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorCorreo6;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion1;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion2;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion4;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion5;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorDireccion6;
@@ -3960,32 +4013,42 @@ try{
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre10;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre11;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre12;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre13;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre16;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre17;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre2;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre3;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre4;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre5;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre8;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorNombre9;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono1;
-    private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono2;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono4;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono5;
     private org.edisoncor.gui.textField.TextField txtAdminAdministradorTelefono6;
-    private org.edisoncor.gui.textField.TextField txtAdminManquinaNombre;
+    private org.edisoncor.gui.textField.TextField txtAdminClasesNombre;
+    private org.edisoncor.gui.textField.TextField txtAdminClasesPrecio;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteApellidos;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteCP;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteCiudad;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteCorreo;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteDireccion;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteDni;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteNombre;
+    private org.edisoncor.gui.textField.TextField txtAdminClienteTelefono;
+    private org.edisoncor.gui.textField.TextField txtAdminMaquiNombre;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajApellid;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajCP;
+    private org.edisoncor.gui.passwordField.PasswordField txtAdminTrabajContrsña;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajCorreo;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajDireccion;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajDni;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajNombre;
+    private org.edisoncor.gui.textField.TextField txtAdminTrabajTeled;
     private org.edisoncor.gui.passwordField.PasswordFieldRound txtLoguinContraseña;
     private org.edisoncor.gui.textField.TextFieldRound txtLoguinUsuario;
-    private org.edisoncor.gui.textField.TextField txtapellidosmonitor;
-    private org.edisoncor.gui.textField.TextField txtcorreomonitor;
-    private org.edisoncor.gui.textField.TextField txtdnimonitor;
+    private org.edisoncor.gui.textField.TextField txtMonitorApellidos;
+    private org.edisoncor.gui.textField.TextField txtMonitorCorreo;
+    private org.edisoncor.gui.textField.TextField txtMonitorDni;
+    private org.edisoncor.gui.textField.TextField txtMonitorNombre;
+    private org.edisoncor.gui.textField.TextField txtMonitorTelefono;
     private org.edisoncor.gui.textField.TextFieldRound txtnombre;
     private org.edisoncor.gui.textField.TextFieldRound txtnombre1;
-    private org.edisoncor.gui.textField.TextField txtnombremonitor;
-    private org.edisoncor.gui.textField.TextField txttelefonomonitor;
     // End of variables declaration//GEN-END:variables
 
     @Override
