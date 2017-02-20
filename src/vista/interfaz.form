@@ -1210,7 +1210,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jPanel5" pref="507" max="32767" attributes="0"/>
+                              <Component id="jPanel5" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1229,8 +1229,142 @@
                         </Property>
                       </Properties>
 
-                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-                        <Property name="useNullLayout" type="boolean" value="false"/>
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelMetric7" min="-2" pref="1106" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="119" pref="119" max="-2" attributes="0"/>
+                                          <Component id="labelMetric21" min="-2" pref="42" max="-2" attributes="0"/>
+                                          <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                                          <Component id="txtAdminClienteDni" min="-2" pref="220" max="-2" attributes="0"/>
+                                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                          <Component id="labelMetric23" min="-2" pref="137" max="-2" attributes="0"/>
+                                          <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                                          <Component id="fecha" min="-2" pref="120" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="99" pref="99" max="-2" attributes="0"/>
+                                          <Component id="labelMetric11" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                          <Component id="txtAdminClienteCP" min="-2" pref="61" max="-2" attributes="0"/>
+                                          <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
+                                          <Component id="labelMetric18" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="txtAdminClienteTelefono" min="-2" pref="180" max="-2" attributes="0"/>
+                                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                          <Component id="labelMetric20" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                                          <Component id="txtAdminClienteCorreo" min="-2" pref="230" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="199" pref="199" max="-2" attributes="0"/>
+                                          <Component id="labelMetric42" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                          <Component id="txtnombre" min="-2" pref="222" max="-2" attributes="0"/>
+                                          <EmptySpace min="277" pref="277" max="-2" attributes="0"/>
+                                          <Component id="labelMetric43" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jScrollPane4" min="-2" pref="752" max="-2" attributes="0"/>
+                                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                          <Component id="jScrollPane5" min="-2" pref="160" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
+                                              <Component id="labelMetric17" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteDireccion" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                                              <Component id="labelMetric19" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteCiudad" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="79" pref="79" max="-2" attributes="0"/>
+                                              <Component id="labelMetric22" min="-2" pref="85" max="-2" attributes="0"/>
+                                              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteNombre" min="-2" pref="220" max="-2" attributes="0"/>
+                                              <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="95" pref="95" max="-2" attributes="0"/>
+                                                      <Component id="txtAdminClienteApellidos" min="-2" pref="330" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="labelMetric10" min="-2" pref="97" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                                  <Component id="labelMetric7" min="-2" pref="39" max="-2" attributes="0"/>
+                                  <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelMetric21" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteDni" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="labelMetric23" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fecha" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelMetric22" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteNombre" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteApellidos" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="labelMetric10" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelMetric17" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteDireccion" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="labelMetric19" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteCiudad" min="-2" pref="24" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelMetric11" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteCP" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="labelMetric18" min="-2" pref="26" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteTelefono" min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="labelMetric20" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtAdminClienteCorreo" min="-2" pref="24" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="62" pref="62" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="labelMetric42" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                                  <Component id="txtnombre" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="labelMetric43" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jScrollPane4" min="-2" pref="157" max="-2" attributes="0"/>
+                                              <Component id="jScrollPane5" min="-2" pref="157" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
+                                          <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
                       </Layout>
                       <SubComponents>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric7">
@@ -1241,11 +1375,6 @@
                               <Font name="Arial" size="22" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="1" y="12" width="1106" height="39"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Container class="javax.swing.JPanel" name="jPanel6">
                           <Properties>
@@ -1260,11 +1389,6 @@
                               </Border>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="959" y="97" width="-1" height="398"/>
-                            </Constraint>
-                          </Constraints>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -1298,7 +1422,7 @@
                                       <Component id="buttonAction6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="buttonAction7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="212" max="32767" attributes="0"/>
                                       <Component id="buttonAction10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="buttonAction9" min="-2" max="-2" attributes="0"/>
@@ -1349,11 +1473,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="100" y="170" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric18">
                           <Properties>
@@ -1362,11 +1481,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="260" y="210" width="-1" height="26"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteTelefono">
                           <Properties>
@@ -1374,11 +1488,6 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="350" y="210" width="180" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric10">
                           <Properties>
@@ -1387,11 +1496,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="440" y="130" width="97" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteApellidos">
                           <Properties>
@@ -1399,11 +1503,6 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="540" y="130" width="255" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteDireccion">
                           <Properties>
@@ -1414,11 +1513,6 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminClienteDireccionActionPerformed"/>
                           </Events>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="200" y="170" width="300" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric19">
                           <Properties>
@@ -1427,11 +1521,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="530" y="170" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteCiudad">
                           <Properties>
@@ -1439,11 +1528,6 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="610" y="170" width="190" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric11">
                           <Properties>
@@ -1452,11 +1536,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="130" y="210" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteCP">
                           <Properties>
@@ -1464,11 +1543,6 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="180" y="210" width="61" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric20">
                           <Properties>
@@ -1477,11 +1551,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="560" y="210" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteCorreo">
                           <Properties>
@@ -1489,11 +1558,6 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="640" y="210" width="174" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric21">
                           <Properties>
@@ -1502,11 +1566,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="150" y="90" width="42" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteDni">
                           <Properties>
@@ -1517,11 +1576,6 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminClienteDniActionPerformed"/>
                           </Events>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="200" y="90" width="190" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric22">
                           <Properties>
@@ -1530,11 +1584,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="110" y="130" width="85" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminClienteNombre">
                           <Properties>
@@ -1545,11 +1594,6 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminClienteNombreActionPerformed"/>
                           </Events>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="200" y="130" width="220" height="24"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric23">
                           <Properties>
@@ -1558,21 +1602,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="440" y="90" width="137" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Container class="javax.swing.JScrollPane" name="jScrollPane4">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="11" y="338" width="752" height="157"/>
-                            </Constraint>
-                          </Constraints>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
@@ -1626,11 +1660,6 @@
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="781" y="338" width="160" height="157"/>
-                            </Constraint>
-                          </Constraints>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
@@ -1653,11 +1682,6 @@
                           <Properties>
                             <Property name="dateFormatString" type="java.lang.String" value="yyyy-MM-dd"/>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="580" y="90" width="130" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric42">
                           <Properties>
@@ -1666,18 +1690,8 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="210" y="298" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextFieldRound" name="txtnombre">
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="282" y="299" width="222" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric43">
                           <Properties>
@@ -1686,11 +1700,6 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
-                          <Constraints>
-                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                              <AbsoluteConstraints x="781" y="298" width="-1" height="-1"/>
-                            </Constraint>
-                          </Constraints>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1811,107 +1820,8 @@
                         </Property>
                       </Properties>
 
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelMetric24" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="labelMetric25" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="labelMetric27" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
-                                              <Component id="labelMetric26" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="txtAdminTrabajDireccion" max="32767" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="labelMetric29" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="txtAdminTrabajCP" min="-2" pref="145" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="txtAdminTrabajTeled" min="-2" pref="223" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                                  <Component id="labelMetric30" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="txtAdminTrabajCorreo" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="txtAdminTrabajNombre" pref="332" max="32767" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="labelMetric28" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="txtAdminTrabajApellid" min="-2" pref="352" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="labelMetric31" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txtAdminTrabajDni" min="-2" pref="190" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="labelMetric32" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="txtAdminTrabajContrsña" min="-2" pref="273" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="17" pref="647" max="32767" attributes="0"/>
-                                          <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                  <Component id="labelMetric24" min="-2" pref="39" max="-2" attributes="0"/>
-                                  <EmptySpace pref="46" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtAdminTrabajContrsña" alignment="1" min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="labelMetric32" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtAdminTrabajDni" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                          <Component id="labelMetric31" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="labelMetric28" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtAdminTrabajApellid" alignment="1" min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                          <Component id="txtAdminTrabajNombre" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                          <Component id="labelMetric27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtAdminTrabajCP" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Component id="labelMetric29" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtAdminTrabajDireccion" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Component id="labelMetric25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="labelMetric26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtAdminTrabajTeled" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Component id="labelMetric30" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="txtAdminTrabajCorreo" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                                  <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                        <Property name="useNullLayout" type="boolean" value="false"/>
                       </Layout>
                       <SubComponents>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric24">
@@ -1922,6 +1832,11 @@
                               <Font name="Arial" size="22" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="1" y="34" width="929" height="39"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Container class="javax.swing.JPanel" name="jPanel9">
                           <Properties>
@@ -1936,25 +1851,25 @@
                               </Border>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="60" y="300" width="810" height="60"/>
+                            </Constraint>
+                          </Constraints>
 
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="buttonAction13" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="buttonAction14" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="buttonAction11" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="buttonAction12" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="buttonAction13" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                      <Component id="buttonAction11" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="89" max="32767" attributes="0"/>
+                                      <Component id="buttonAction12" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                      <Component id="buttonAction14" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1965,13 +1880,10 @@
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="buttonAction13" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="buttonAction14" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="buttonAction12" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="buttonAction11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="buttonAction12" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="12" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -2018,6 +1930,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="60" y="210" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric26">
                           <Properties>
@@ -2026,6 +1943,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="70" y="250" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajTeled">
                           <Properties>
@@ -2033,6 +1955,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="170" y="250" width="170" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric27">
                           <Properties>
@@ -2041,6 +1968,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="70" y="170" width="80" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajNombre">
                           <Properties>
@@ -2048,6 +1980,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="170" y="170" width="280" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajDireccion">
                           <Properties>
@@ -2055,6 +1992,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="170" y="210" width="480" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric28">
                           <Properties>
@@ -2063,6 +2005,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="469" y="169" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajApellid">
                           <Properties>
@@ -2070,6 +2017,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="568" y="167" width="310" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric29">
                           <Properties>
@@ -2078,6 +2030,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="666" y="209" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajCP">
                           <Properties>
@@ -2085,6 +2042,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="775" y="210" width="100" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric30">
                           <Properties>
@@ -2093,6 +2055,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="371" y="252" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajCorreo">
                           <Properties>
@@ -2100,6 +2067,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="448" y="253" width="430" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric31">
                           <Properties>
@@ -2108,6 +2080,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="120" y="120" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminTrabajDni">
                           <Properties>
@@ -2118,6 +2095,11 @@
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminTrabajDniActionPerformed"/>
                           </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="170" y="120" width="140" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.label.LabelMetric" name="labelMetric32">
                           <Properties>
@@ -2126,6 +2108,11 @@
                               <Font name="Arial" size="18" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="318" y="119" width="-1" height="-1"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                         <Component class="org.edisoncor.gui.passwordField.PasswordField" name="txtAdminTrabajContrs&#xf1;a">
                           <Properties>
@@ -2133,6 +2120,11 @@
                               <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="429" y="120" width="273" height="24"/>
+                            </Constraint>
+                          </Constraints>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -2947,7 +2939,7 @@
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorTelefono6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2962,14 +2954,14 @@
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorNombre16">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorDireccion6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2984,7 +2976,7 @@
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorApellidos10">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2999,7 +2991,7 @@
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorCodPostal6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3014,7 +3006,7 @@
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorCorreo6">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3030,7 +3022,7 @@
                       <Properties>
                         <Property name="editable" type="boolean" value="false"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3045,7 +3037,7 @@
                     <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorApellidos11">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="18" style="1"/>
+                          <Font name="Arial" size="14" style="1"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3472,25 +3464,22 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="btnTrabClienteClases" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="buttonAction26" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="buttonAction28" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="buttonAction30" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btnTrabClienteMatricula" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                      <Component id="buttonAction28" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="buttonAction29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="buttonAction27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="buttonAction29" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="buttonAction35" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="atras1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3501,41 +3490,19 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="buttonAction26" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="buttonAction27" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="buttonAction28" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="buttonAction29" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="atras1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="31" max="32767" attributes="0"/>
-                                      <Component id="buttonAction35" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="176" max="32767" attributes="0"/>
+                                      <Component id="btnTrabClienteClases" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="buttonAction30" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnTrabClienteMatricula" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction26">
-                              <Properties>
-                                <Property name="text" type="java.lang.String" value="Nuevo"/>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction26ActionPerformed"/>
-                              </Events>
-                            </Component>
-                            <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction27">
-                              <Properties>
-                                <Property name="text" type="java.lang.String" value="Guardar"/>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction27ActionPerformed"/>
-                              </Events>
-                            </Component>
                             <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction28">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Modificar"/>
@@ -3549,28 +3516,20 @@
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction29ActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction30">
-                              <Properties>
-                                <Property name="text" type="java.lang.String" value="Mensualidad"/>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction30ActionPerformed"/>
-                              </Events>
-                            </Component>
-                            <Component class="org.edisoncor.gui.button.ButtonAction" name="buttonAction35">
+                            <Component class="org.edisoncor.gui.button.ButtonAction" name="btnTrabClienteMatricula">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="Matricula"/>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonAction35ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTrabClienteMatriculaActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="org.edisoncor.gui.button.ButtonAction" name="atras1">
+                            <Component class="org.edisoncor.gui.button.ButtonAction" name="btnTrabClienteClases">
                               <Properties>
-                                <Property name="text" type="java.lang.String" value="Atr&#xe1;s"/>
+                                <Property name="text" type="java.lang.String" value="Clases"/>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atras1ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTrabClienteClasesActionPerformed"/>
                               </Events>
                             </Component>
                           </SubComponents>
@@ -3594,7 +3553,7 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorTelefono4">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3609,14 +3568,14 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorNombre8">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                         </Component>
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorDireccion4">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -3634,7 +3593,7 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorApellidos7">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3649,7 +3608,7 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorCodPostal4">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3664,7 +3623,7 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorCorreo4">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                         </Component>
@@ -3679,7 +3638,7 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorNombre9">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                           <Events>
@@ -3697,7 +3656,7 @@
                         <Component class="org.edisoncor.gui.textField.TextField" name="txtAdminAdministradorApellidos8">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Arial" size="18" style="1"/>
+                              <Font name="Arial" size="14" style="1"/>
                             </Property>
                           </Properties>
                           <Events>

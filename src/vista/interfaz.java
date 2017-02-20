@@ -332,13 +332,10 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel21 = new javax.swing.JPanel();
         labelMetric59 = new org.edisoncor.gui.label.LabelMetric();
         jPanel22 = new javax.swing.JPanel();
-        buttonAction26 = new org.edisoncor.gui.button.ButtonAction();
-        buttonAction27 = new org.edisoncor.gui.button.ButtonAction();
         buttonAction28 = new org.edisoncor.gui.button.ButtonAction();
         buttonAction29 = new org.edisoncor.gui.button.ButtonAction();
-        buttonAction30 = new org.edisoncor.gui.button.ButtonAction();
-        buttonAction35 = new org.edisoncor.gui.button.ButtonAction();
-        atras1 = new org.edisoncor.gui.button.ButtonAction();
+        btnTrabClienteMatricula = new org.edisoncor.gui.button.ButtonAction();
+        btnTrabClienteClases = new org.edisoncor.gui.button.ButtonAction();
         labelMetric60 = new org.edisoncor.gui.label.LabelMetric();
         labelMetric61 = new org.edisoncor.gui.label.LabelMetric();
         txtAdminAdministradorTelefono4 = new org.edisoncor.gui.textField.TextField();
@@ -1005,12 +1002,10 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelMetric7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelMetric7.setText("DATOS CLIENTES");
         labelMetric7.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        jPanel5.add(labelMetric7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 12, 1106, 39));
 
         jPanel6.setBackground(new java.awt.Color(12, 12, 12));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -1069,32 +1064,25 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addComponent(buttonAction6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonAction7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
                 .addComponent(buttonAction10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonAction9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(959, 97, -1, 398));
-
         labelMetric17.setText("Direccion:");
         labelMetric17.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric17, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
 
         labelMetric18.setText("Telefono:");
         labelMetric18.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, 26));
 
         txtAdminClienteTelefono.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminClienteTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 180, 24));
 
         labelMetric10.setText("Apellidos:");
         labelMetric10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 97, -1));
 
         txtAdminClienteApellidos.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminClienteApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 255, 24));
 
         txtAdminClienteDireccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminClienteDireccion.addActionListener(new java.awt.event.ActionListener() {
@@ -1102,32 +1090,24 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 txtAdminClienteDireccionActionPerformed(evt);
             }
         });
-        jPanel5.add(txtAdminClienteDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 300, 24));
 
         labelMetric19.setText("Ciudad:");
         labelMetric19.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric19, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 170, -1, -1));
 
         txtAdminClienteCiudad.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminClienteCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 190, 24));
 
         labelMetric11.setText("C.P.");
         labelMetric11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
 
         txtAdminClienteCP.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminClienteCP, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 61, 24));
 
         labelMetric20.setText("Correo:");
         labelMetric20.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric20, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, -1, -1));
 
         txtAdminClienteCorreo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jPanel5.add(txtAdminClienteCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, 174, 24));
 
         labelMetric21.setText("Dni:");
         labelMetric21.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric21, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 42, -1));
 
         txtAdminClienteDni.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminClienteDni.addActionListener(new java.awt.event.ActionListener() {
@@ -1135,11 +1115,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 txtAdminClienteDniActionPerformed(evt);
             }
         });
-        jPanel5.add(txtAdminClienteDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 190, 24));
 
         labelMetric22.setText("Nombre:");
         labelMetric22.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric22, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 85, -1));
 
         txtAdminClienteNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminClienteNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -1147,11 +1125,9 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 txtAdminClienteNombreActionPerformed(evt);
             }
         });
-        jPanel5.add(txtAdminClienteNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 220, 24));
 
         labelMetric23.setText("F. Nacimiento:");
         labelMetric23.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric23, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 137, -1));
 
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1179,8 +1155,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
         jScrollPane4.setViewportView(tablaClientes);
 
-        jPanel5.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 338, 752, 157));
-
         listaClientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 listaClientesMouseClicked(evt);
@@ -1188,19 +1162,127 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         });
         jScrollPane5.setViewportView(listaClientes);
 
-        jPanel5.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(781, 338, 160, 157));
-
         fecha.setDateFormatString("yyyy-MM-dd");
-        jPanel5.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 130, -1));
 
         labelMetric42.setText("Buscar:");
         labelMetric42.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric42, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 298, -1, -1));
-        jPanel5.add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 299, 222, -1));
 
         labelMetric43.setText("Clases");
         labelMetric43.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jPanel5.add(labelMetric43, new org.netbeans.lib.awtextra.AbsoluteConstraints(781, 298, -1, -1));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(labelMetric7, javax.swing.GroupLayout.PREFERRED_SIZE, 1106, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(labelMetric21, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)
+                        .addComponent(txtAdminClienteDni, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(labelMetric23, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(labelMetric11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(txtAdminClienteCP, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
+                        .addComponent(labelMetric18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(txtAdminClienteTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(labelMetric20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(txtAdminClienteCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(labelMetric42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(277, 277, 277)
+                        .addComponent(labelMetric43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 752, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addGap(69, 69, 69)
+                            .addComponent(labelMetric17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(10, 10, 10)
+                            .addComponent(txtAdminClienteDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30)
+                            .addComponent(labelMetric19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(12, 12, 12)
+                            .addComponent(txtAdminClienteCiudad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addGap(79, 79, 79)
+                            .addComponent(labelMetric22, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(5, 5, 5)
+                            .addComponent(txtAdminClienteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(20, 20, 20)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                    .addGap(95, 95, 95)
+                                    .addComponent(txtAdminClienteApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(labelMetric10, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(labelMetric7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMetric21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteDni, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelMetric23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMetric22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelMetric10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMetric17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelMetric19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMetric11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteCP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelMetric18, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelMetric20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAdminClienteCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMetric42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelMetric43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -1215,7 +1297,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1257,10 +1339,12 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
         jPanel8.setBackground(new java.awt.Color(0, 0, 0));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 0)));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelMetric24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelMetric24.setText("DATOS TRABAJADORES");
         labelMetric24.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        jPanel8.add(labelMetric24, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 34, 929, 39));
 
         jPanel9.setBackground(new java.awt.Color(12, 12, 12));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -1298,17 +1382,15 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(buttonAction13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(buttonAction14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(buttonAction11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(buttonAction12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(60, 60, 60)
+                .addComponent(buttonAction13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(buttonAction11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addComponent(buttonAction12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
+                .addComponent(buttonAction14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1316,46 +1398,59 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonAction13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAction14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonAction12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAction11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(buttonAction14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAction11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAction12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
+
+        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 810, 60));
 
         labelMetric25.setText("Direccion:");
         labelMetric25.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric25, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
 
         labelMetric26.setText("Telefono:");
         labelMetric26.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric26, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         txtAdminTrabajTeled.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel8.add(txtAdminTrabajTeled, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 170, 24));
 
         labelMetric27.setText("Nombre:");
         labelMetric27.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric27, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 80, -1));
 
         txtAdminTrabajNombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel8.add(txtAdminTrabajNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 280, 24));
 
         txtAdminTrabajDireccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel8.add(txtAdminTrabajDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 480, 24));
 
         labelMetric28.setText("Apellidos:");
         labelMetric28.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric28, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 169, -1, -1));
 
         txtAdminTrabajApellid.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel8.add(txtAdminTrabajApellid, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 167, 310, 24));
 
         labelMetric29.setText("Cod. Postal");
         labelMetric29.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric29, new org.netbeans.lib.awtextra.AbsoluteConstraints(666, 209, -1, -1));
 
         txtAdminTrabajCP.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel8.add(txtAdminTrabajCP, new org.netbeans.lib.awtextra.AbsoluteConstraints(775, 210, 100, 24));
 
         labelMetric30.setText("Correo:");
         labelMetric30.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric30, new org.netbeans.lib.awtextra.AbsoluteConstraints(371, 252, -1, -1));
 
         txtAdminTrabajCorreo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jPanel8.add(txtAdminTrabajCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 253, 430, 24));
 
         labelMetric31.setText("Dni:");
         labelMetric31.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric31, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
         txtAdminTrabajDni.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminTrabajDni.addActionListener(new java.awt.event.ActionListener() {
@@ -1363,95 +1458,14 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
                 txtAdminTrabajDniActionPerformed(evt);
             }
         });
+        jPanel8.add(txtAdminTrabajDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 140, 24));
 
         labelMetric32.setText("Contraseña:");
         labelMetric32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jPanel8.add(labelMetric32, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 119, -1, -1));
 
         txtAdminTrabajContrsña.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelMetric24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelMetric25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelMetric27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelMetric26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(txtAdminTrabajDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(labelMetric29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtAdminTrabajCP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(txtAdminTrabajTeled, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(labelMetric30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtAdminTrabajCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(txtAdminTrabajNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(labelMetric28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtAdminTrabajApellid, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(labelMetric31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAdminTrabajDni, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(labelMetric32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAdminTrabajContrsña, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addGap(17, 647, Short.MAX_VALUE)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(labelMetric24, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtAdminTrabajContrsña, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelMetric32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtAdminTrabajDni, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labelMetric31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelMetric28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminTrabajApellid, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtAdminTrabajNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labelMetric27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAdminTrabajCP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMetric29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminTrabajDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMetric25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelMetric26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminTrabajTeled, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMetric30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminTrabajCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(106, 106, 106)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jPanel8.add(txtAdminTrabajContrsña, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 120, 273, 24));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1965,40 +1979,40 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric90.setText("Telefono:");
         labelMetric90.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorTelefono6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorTelefono6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric91.setText("Nombre:");
         labelMetric91.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorNombre16.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorNombre16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        txtAdminAdministradorDireccion6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorDireccion6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric92.setText("Apellidos:");
         labelMetric92.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorApellidos10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorApellidos10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric93.setText("Cod. Postal");
         labelMetric93.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorCodPostal6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorCodPostal6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric94.setText("Correo:");
         labelMetric94.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorCorreo6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorCorreo6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric95.setText("Dni:");
         labelMetric95.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
         txtAdminAdministradorNombre17.setEditable(false);
-        txtAdminAdministradorNombre17.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorNombre17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric96.setText("Contraseña:");
         labelMetric96.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorApellidos11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorApellidos11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -2161,20 +2175,6 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         jPanel22.setBackground(new java.awt.Color(12, 12, 12));
         jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
-        buttonAction26.setText("Nuevo");
-        buttonAction26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction26ActionPerformed(evt);
-            }
-        });
-
-        buttonAction27.setText("Guardar");
-        buttonAction27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction27ActionPerformed(evt);
-            }
-        });
-
         buttonAction28.setText("Modificar");
 
         buttonAction29.setText("Eliminar");
@@ -2184,24 +2184,17 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             }
         });
 
-        buttonAction30.setText("Mensualidad");
-        buttonAction30.addActionListener(new java.awt.event.ActionListener() {
+        btnTrabClienteMatricula.setText("Matricula");
+        btnTrabClienteMatricula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction30ActionPerformed(evt);
+                btnTrabClienteMatriculaActionPerformed(evt);
             }
         });
 
-        buttonAction35.setText("Matricula");
-        buttonAction35.addActionListener(new java.awt.event.ActionListener() {
+        btnTrabClienteClases.setText("Clases");
+        btnTrabClienteClases.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonAction35ActionPerformed(evt);
-            }
-        });
-
-        atras1.setText("Atrás");
-        atras1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atras1ActionPerformed(evt);
+                btnTrabClienteClasesActionPerformed(evt);
             }
         });
 
@@ -2212,38 +2205,29 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(btnTrabClienteClases, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonAction26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonAction28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonAction30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonAction27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonAction29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonAction35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(atras1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(btnTrabClienteMatricula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(buttonAction28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonAction29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(buttonAction26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buttonAction27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonAction28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonAction29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(atras1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(buttonAction35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addComponent(btnTrabClienteClases, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buttonAction30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnTrabClienteMatricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -2253,14 +2237,14 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric61.setText("Telefono:");
         labelMetric61.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorTelefono4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorTelefono4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric62.setText("Apellidos:");
         labelMetric62.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorNombre8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorNombre8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        txtAdminAdministradorDireccion4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorDireccion4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminAdministradorDireccion4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAdminAdministradorDireccion4ActionPerformed(evt);
@@ -2270,22 +2254,22 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric63.setText("Ciudad:");
         labelMetric63.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorApellidos7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorApellidos7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric64.setText("C.P.");
         labelMetric64.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorCodPostal4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorCodPostal4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric65.setText("Correo:");
         labelMetric65.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorCorreo4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorCorreo4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         labelMetric66.setText("Dni:");
         labelMetric66.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorNombre9.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorNombre9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminAdministradorNombre9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAdminAdministradorNombre9ActionPerformed(evt);
@@ -2295,7 +2279,7 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         labelMetric67.setText("Nombre:");
         labelMetric67.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
-        txtAdminAdministradorApellidos8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        txtAdminAdministradorApellidos8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtAdminAdministradorApellidos8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAdminAdministradorApellidos8ActionPerformed(evt);
@@ -3499,29 +3483,17 @@ try{
         // TODO add your handling code here:
     }//GEN-LAST:event_avatarTrabKeyPressed
 
-    private void buttonAction26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAction26ActionPerformed
-
-    private void buttonAction27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAction27ActionPerformed
-
     private void buttonAction29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction29ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonAction29ActionPerformed
 
-    private void buttonAction30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction30ActionPerformed
+    private void btnTrabClienteMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabClienteMatriculaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAction30ActionPerformed
+    }//GEN-LAST:event_btnTrabClienteMatriculaActionPerformed
 
-    private void buttonAction35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction35ActionPerformed
+    private void btnTrabClienteClasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabClienteClasesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonAction35ActionPerformed
-
-    private void atras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atras1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_atras1ActionPerformed
+    }//GEN-LAST:event_btnTrabClienteClasesActionPerformed
 
     private void txtAdminAdministradorDireccion4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAdministradorDireccion4ActionPerformed
         // TODO add your handling code here:
@@ -3894,12 +3866,13 @@ try{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private org.edisoncor.gui.label.LabelTask Cobro;
     private org.edisoncor.gui.button.ButtonAction Guardar;
-    private org.edisoncor.gui.button.ButtonAction atras1;
     private org.edisoncor.gui.panel.PanelAvatarChooser avatarAdmin;
     private org.edisoncor.gui.panel.PanelAvatarChooser avatarTrab;
     private org.edisoncor.gui.button.ButtonIpod btnAdminIpod;
     private org.edisoncor.gui.button.ButtonCircle btnAdminRetroceso;
     private org.edisoncor.gui.button.ButtonAction btnLoguinEntrar;
+    private org.edisoncor.gui.button.ButtonAction btnTrabClienteClases;
+    private org.edisoncor.gui.button.ButtonAction btnTrabClienteMatricula;
     private org.edisoncor.gui.button.ButtonIpod btnTrabIpod;
     private org.edisoncor.gui.button.ButtonCircle btnTrabajadorRetroceso;
     private org.edisoncor.gui.button.ButtonAction buttonAction1;
@@ -3917,17 +3890,13 @@ try{
     private org.edisoncor.gui.button.ButtonAction buttonAction21;
     private org.edisoncor.gui.button.ButtonAction buttonAction22;
     private org.edisoncor.gui.button.ButtonAction buttonAction25;
-    private org.edisoncor.gui.button.ButtonAction buttonAction26;
-    private org.edisoncor.gui.button.ButtonAction buttonAction27;
     private org.edisoncor.gui.button.ButtonAction buttonAction28;
     private org.edisoncor.gui.button.ButtonAction buttonAction29;
     private org.edisoncor.gui.button.ButtonAction buttonAction3;
-    private org.edisoncor.gui.button.ButtonAction buttonAction30;
     private org.edisoncor.gui.button.ButtonAction buttonAction31;
     private org.edisoncor.gui.button.ButtonAction buttonAction32;
     private org.edisoncor.gui.button.ButtonAction buttonAction33;
     private org.edisoncor.gui.button.ButtonAction buttonAction34;
-    private org.edisoncor.gui.button.ButtonAction buttonAction35;
     private org.edisoncor.gui.button.ButtonAction buttonAction39;
     private org.edisoncor.gui.button.ButtonAction buttonAction4;
     private org.edisoncor.gui.button.ButtonAction buttonAction46;
