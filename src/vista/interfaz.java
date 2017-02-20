@@ -3291,6 +3291,8 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
     private void buttonAction16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction16ActionPerformed
         //boton admin clase eliminar
+        if(tablaClases.getSelectedRow()> -1) {
+            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?")==0){
         String id;
         id= String.valueOf( this.tablaClases.getValueAt(tablaClases.getSelectedRow(), 0)); 
         f.eliminarClase(Integer.parseInt(id));
@@ -3298,6 +3300,10 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
         
         txtAdminClasesNombre.setText("");
         txtAdminClasesPrecio.setText("");
+            }
+      }else{
+            JOptionPane.showMessageDialog(null, "Seleccione una fila");
+            }
     }//GEN-LAST:event_buttonAction16ActionPerformed
 
     private void tablaClasesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tablaClasesKeyReleased
@@ -3356,11 +3362,17 @@ public class interfaz extends javax.swing.JFrame implements DocumentListener{
 
     private void buttonAction32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction32ActionPerformed
         //boton admin clase eliminar maquina
+        if(tablaMaquinas.getSelectedRow()> -1) {
+            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?")==0){
         String idMaquina= (String) tablaMaquinas.getValueAt(tablaMaquinas.getSelectedRow(), 0);
         f.eliminarMaquina(Integer.parseInt(idMaquina));
         this.tablaMaquinas.setModel(f.listarMaquinas());
         
         txtAdminMaquiNombre.setText("");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Seleccione una fila");
+        }
     }//GEN-LAST:event_buttonAction32ActionPerformed
 
     private void buttonAction9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction9ActionPerformed
@@ -3567,7 +3579,7 @@ try{
 
     private void buttonAction4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction4ActionPerformed
         //boton admin admin modificar
-        
+        if(!txtAdminAdministradorDni.getText().isEmpty() && !txtAdminAdministradorContraseña.getText().isEmpty() && !txtAdminAdministradorContraseña.getText().isEmpty() && !txtAdminAdministradorNombre.getText().isEmpty() && !txtAdminAdministradorApellidos.getText().isEmpty() && !txtAdminAdministradorDireccion.getText().isEmpty() && !txtAdminAdministradorTelefono.getText().isEmpty() && !txtAdminAdministradorCorreo.getText().isEmpty() && !txtAdminAdministradorCodPostal.getText().isEmpty()){
         if(c.comprobacion(txtAdminAdministradorTelefono.getText()) && c.comprobacion(txtAdminAdministradorCodPostal.getText())){
         f.modificarEmpleado(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
         this.listaAdmin.setModel(f.listAdmin());
@@ -3585,10 +3597,16 @@ try{
         }else{
             JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Teléfono");
         }
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellena todo los campos");
+        }
     }//GEN-LAST:event_buttonAction4ActionPerformed
 
     private void buttonAction5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction5ActionPerformed
         //Boton admin admin eliminar
+        if (listaAdmin.getSelectedIndex() > -1) {
+            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?")==0){
+            
         f.eliminarEmpleado(txtAdminAdministradorDni.getText());
         this.listaAdmin.setModel(f.listAdmin());
         
@@ -3600,11 +3618,15 @@ try{
         txtAdminAdministradorCodPostal.setText("");
         txtAdminAdministradorTelefono.setText("");
         txtAdminAdministradorCorreo.setText("");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Selecciona algun administrador de la lista");
+        }
     }//GEN-LAST:event_buttonAction5ActionPerformed
 
     private void buttonAction3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction3ActionPerformed
-        //boton admin admin guardar
         
+        if(!txtAdminAdministradorDni.getText().isEmpty() && !txtAdminAdministradorContraseña.getText().isEmpty() && !txtAdminAdministradorContraseña.getText().isEmpty() && !txtAdminAdministradorNombre.getText().isEmpty() && !txtAdminAdministradorApellidos.getText().isEmpty() && !txtAdminAdministradorDireccion.getText().isEmpty() && !txtAdminAdministradorTelefono.getText().isEmpty() && !txtAdminAdministradorCorreo.getText().isEmpty() && !txtAdminAdministradorCodPostal.getText().isEmpty()){
         if(c.comprobacion(txtAdminAdministradorTelefono.getText())  && c.comprobacion(txtAdminAdministradorCodPostal.getText())){
         
             f.añadirAdministrador(txtAdminAdministradorDni.getText(),txtAdminAdministradorContraseña.getText(), 1, txtAdminAdministradorNombre.getText(), txtAdminAdministradorApellidos.getText(), txtAdminAdministradorDireccion.getText(), Integer.parseInt(txtAdminAdministradorTelefono.getText()),txtAdminAdministradorCorreo.getText(), Integer.parseInt(txtAdminAdministradorCodPostal.getText()));
@@ -3623,10 +3645,13 @@ try{
         }else{
             JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Teléfono");
         }
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellena todo los campos");
+        }
     }//GEN-LAST:event_buttonAction3ActionPerformed
 
     private void buttonAction6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction6ActionPerformed
-        //boton admin cliente modificar
+        if(!txtAdminClienteDni.getText().isEmpty() && !txtAdminClienteNombre.getText().isEmpty() && !txtAdminClienteApellidos.getText().isEmpty() && !txtAdminClienteDireccion.getText().isEmpty() && !txtAdminClienteCP.getText().isEmpty() && !txtAdminClienteCiudad.getText().isEmpty() && !txtAdminClienteTelefono.getText().isEmpty() && !txtAdminClienteCorreo.getText().isEmpty()){
         if(c.comprobacion(txtAdminClienteCP.getText())  && c.comprobacion(txtAdminClienteTelefono.getText())){
         String fecha = new SimpleDateFormat("yyyy-MM-dd").format(this.fecha.getDate());
         f.modificarCliente(txtAdminClienteDni.getText(), txtAdminClienteNombre.getText(), txtAdminClienteApellidos.getText(), fecha, txtAdminClienteDireccion.getText(), Integer.parseInt(txtAdminClienteCP.getText()), txtAdminClienteCiudad.getText(), Integer.parseInt(txtAdminClienteTelefono.getText()), txtAdminClienteCorreo.getText());
@@ -3645,10 +3670,14 @@ try{
         }else{
             JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Telefono y codigo postal");
         }
+        }else{
+        JOptionPane.showMessageDialog(null, "Rellene todo los campos");
+    }
     }//GEN-LAST:event_buttonAction6ActionPerformed
 
     private void buttonAction14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction14ActionPerformed
         //boton admin trabajador guardar
+        if(!txtAdminTrabajDni.getText().isEmpty() && !txtAdminTrabajContrsña.getText().isEmpty() && txtAdminTrabajContrsña.getText().isEmpty() && !txtAdminTrabajNombre.getText().isEmpty() && !txtAdminTrabajApellid.getText().isEmpty() && !txtAdminTrabajDireccion.getText().isEmpty() && !txtAdminTrabajTeled.getText().isEmpty() && !txtAdminTrabajCorreo.getText().isEmpty() && !txtAdminTrabajCP.getText().isEmpty()){
         if(c.comprobacion(txtAdminTrabajCP.getText())  && c.comprobacion(txtAdminTrabajTeled.getText())){
         f.añadirTrabajador(txtAdminTrabajDni.getText(), txtAdminTrabajContrsña.getText(), 0, txtAdminTrabajNombre.getText(), txtAdminTrabajApellid.getText(), txtAdminTrabajDireccion.getText(), Integer.parseInt(txtAdminTrabajTeled.getText()), txtAdminTrabajCorreo.getText(),Integer.parseInt(txtAdminTrabajCP.getText()));
         this.listaTrabajadores.setModel(f.listTrabajador());
@@ -3665,6 +3694,9 @@ try{
             JOptionPane.showMessageDialog(null, "Trabajador guardado");
         }else{
             JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Telefono y codigo postal");
+        }
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellena todo los campos");
         }
     }//GEN-LAST:event_buttonAction14ActionPerformed
 
@@ -3691,6 +3723,8 @@ try{
 
     private void buttonAction12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction12ActionPerformed
         //boton admin trabajador eliminar
+        if (listaTrabajadores.getSelectedIndex() > -1) {
+            if(JOptionPane.showConfirmDialog(null, "¿Seguro que desea eliminar?")==0){
         f.eliminarTrabajador(txtAdminTrabajDni.getText());
         this.listaTrabajadores.setModel(f.listTrabajador());
         
@@ -3702,10 +3736,15 @@ try{
         txtAdminTrabajTeled.setText("");
         txtAdminTrabajCorreo.setText("");
         txtAdminTrabajContrsña.setText("");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Seleccione una fila");
+        }
     }//GEN-LAST:event_buttonAction12ActionPerformed
 
     private void buttonAction11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction11ActionPerformed
         //boton admin trabajador modificar
+        if(!txtAdminTrabajDni.getText().isEmpty() && !txtAdminTrabajContrsña.getText().isEmpty() && txtAdminTrabajContrsña.getText().isEmpty() && !txtAdminTrabajNombre.getText().isEmpty() && !txtAdminTrabajApellid.getText().isEmpty() && !txtAdminTrabajDireccion.getText().isEmpty() && !txtAdminTrabajTeled.getText().isEmpty() && !txtAdminTrabajCorreo.getText().isEmpty() && !txtAdminTrabajCP.getText().isEmpty()){
         if(c.comprobacion(txtAdminTrabajCP.getText())  && c.comprobacion(txtAdminTrabajTeled.getText())){
         f.modificarTrabajador(txtAdminTrabajDni.getText(), txtAdminTrabajContrsña.getText(), txtAdminTrabajNombre.getText(), txtAdminTrabajApellid.getText(), txtAdminTrabajDireccion.getText(), Integer.parseInt(txtAdminTrabajTeled.getText()), txtAdminTrabajCorreo.getText(),Integer.parseInt(txtAdminTrabajCP.getText()));
         this.listaTrabajadores.setModel(f.listTrabajador());
@@ -3723,6 +3762,10 @@ try{
         }else{
             JOptionPane.showMessageDialog(null, "Solo caracteres numericos en Telefono y codigo postal");
         }
+        }else{
+            JOptionPane.showMessageDialog(null, "Rellena todo los campos");
+        }
+
     }//GEN-LAST:event_buttonAction11ActionPerformed
 
     private void buttonAction15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAction15ActionPerformed
